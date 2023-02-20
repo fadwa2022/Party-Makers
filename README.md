@@ -16,12 +16,19 @@ Makers Party est un site web qui permet à chaque personne de créer une fête p
 ![](https://github.com/fadwa2022/IMAGEMP/blob/main/images/uml%20.png)
 ![](https://github.com/fadwa2022/IMAGEMP/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202023-02-20%20101802.png)
 ##  CLASSE
-* ![](https://github.com/fadwa2022/IMAGEMP/blob/main/images/classe.png)
-* ![](https://github.com/fadwa2022/IMAGEMP/blob/main/images/c2.png)
+<p aligne="center">
+<img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/classe.png">
+ <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/c2.png">
+</p>
 ## SEQUENCE
-*![](https://github.com/fadwa2022/IMAGEMP/blob/main/images/AS.png)
-*  ![](https://github.com/fadwa2022/IMAGEMP/blob/main/images/cs.png)
-* ![](https://github.com/fadwa2022/IMAGEMP/blob/main/images/ds.png)
-* ![](https://github.com/fadwa2022/IMAGEMP/blob/main/images/ss.png)
+<p aligne="center">
+<img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/AS.png">
+<img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/cs.png">
+  <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/ds.png">
+  <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/ss.png">
+</p>
+
 # MAQUETTE
-![](https://github.com/fadwa2022/IMAGEMP/blob/main/images/maquetteparty0.png)
+<p aligne="center">
+<img  aligne="center" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/maquetteparty0.png">
+</p>
