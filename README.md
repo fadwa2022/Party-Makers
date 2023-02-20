@@ -29,7 +29,7 @@ Makers Party est un site web qui permet à chaque personne de créer une fête p
 </p>
 
 # MAQUETTE
-![](https://www.figma.com/file/Qn7YG2ZYPyLCZGjjInaMux/Untitled?node-id=0%3A1&t=22izu5xqoiFHGJr7-1)
+[MAQUETTE](https://www.figma.com/file/Qn7YG2ZYPyLCZGjjInaMux/Untitled?node-id=0%3A1&t=22izu5xqoiFHGJr7-1)
 <p aligne="center">
 <img  aligne="center" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/maquetteparty0.png">
 </p>
