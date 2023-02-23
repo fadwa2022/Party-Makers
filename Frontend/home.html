@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2.2.7/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<style>
+
+.hover\:border-4:hover {
+    border-width: 4px;
+}
+.hover\:m-0:hover {
+    margin: 0;
+}
+.focus\:border-4:focus {
+    border-width: 4px;
+}
+.focus\:m-0:focus {
+    margin: 0;
+}
+.active\:border-grey-900:active {
+    --tw-bg-opacity: 1;
+    border-color: rgba(17, 24, 39,var(--tw-bg-opacity));
+}
+.active\:text-grey-900:active {
+    --tw-bg-opacity: 1;
+    color: rgba(17, 24, 39,var(--tw-bg-opacity));
+}
+.active\:border-transparent:active {
+    border-color: transparent;
+}
+
+</style>
+<body>
+<section class=" bg-cover bg-no-repeat" style="background-image:url('./bg/bghome.jpg')">
+	<nav class="relative px-4 py-4 flex justify-between items-center bg-transparent">
+		<div class="lg:hidden">
+			<button class="navbar-burger flex items-center text-blue-600 p-3">
+				<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<title>Mobile menu</title>
+					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+				</svg>
+			</button>
+		</div>
+		<ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-11">
+			<li><a class="font-medium text-sm text-gray-400 hover:text-gray-500" href="#">Home</a></li>
+			<li><a class="font-medium text-sm text-gray-400 hover:text-gray-500" href="#">Tickets</a></li>
+
+			<li><a class=" font-medium text-sm text-gray-400 hover:text-gray-500 " href="#">About Us</a></li>
+			<li>
+			<a class="text-3xl font-bold leading-none" href="#">
+                <img src="./bg/logo.png" class="w-20 h-20 "  alt="" srcset="" />
+		    </a></li>
+			<li><a class=" font-medium text-sm text-gray-400 hover:text-gray-500" href="#">Services</a></li>
+			
+			<li><a class="font-medium text-sm text-gray-400 hover:text-gray-500" href="#">Pricing</a></li>
+		
+			<li><a class="font-medium text-sm text-gray-400 hover:text-gray-500" href="#">Contact</a></li>
+		</ul>
+		<a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200" href="#">Sign In</a>
+		<a class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href="#">Sign up</a>
+	</nav>
+<div class="flex flex-col justify-around md:flex-row  p-14 ">
+<div class="max-w-sm p-10 bg-white min-h-full w-full  rounded-lg shadow bg-cover bg-no-repeat" style="background-image:url('./img/img1.jpg')">
+    <a href="#">
+        <h5 class="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white mt-28 -ml-20  lg:-ml-36">La Musique ParTout</h5>
+    </a>
+</div>
+<div class="flex-col justify-around ">
+	<p class="text-gray-400 text-left md:w-96 mt-20">
+		Lorem ipsum dolor sit amet, consectetur adipiscing
+		elit, sed do eiusmod tempor incididunt ut labore e
+	   t dolore magna aliqua. Ut enim ad minim veniam, 
+	   quis nostrud exercitation ullamco laboris nisi ut ali
+	   quip ex ea commodo consequat. Duis aute irure d
+	   olor in reprehenderit in voluptate velit esse cillum 
+	   dolore eu fugiat nulla pariatur
+	   
+	   </p>
+	   <div class="p-10 ml-28"><button class=" flex px-5 py-1 rounded-3xl text-sm font-medium text-white bg-transparent outline-none focus:outline-none  hover:m-0 focus:m-0 border border-orange-600 hover:border-4 focus:border-4 hover:border-orange-800 hover:text-orange-800 focus:border-orange-200 active:border-grey-900 active:text-grey-300 transition-all">
+		Show Details 
+		<span class="ml-4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 9H8v2h4v3l4-4-4-4v3z" fill="rgba(194,65,12,1)"/></svg></span>
+	
+	</button></div>
+
+</div>
+</div>
+</section>
+<section class="container-fluid flex-col justify-center items-center   bg-cover bg-no-repeat " style="background-image:url('./bg/bghome2.jpg')">
+<div class="flex justify-center  p-28 pt-48 lg:pt-10"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 13.535V3h8v2h-6v12a4 4 0 1 1-2-3.465zM10 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill="rgba(216,91,31,1)"/></svg></div>
+<div class="-mt-20"><h5 class="text-center text-4xl font-bold tracking-tight text-gray-900 dark:text-white">About  Us</h5></div>
+<div class="flex justify-center w-75 ">	
+	<p class= "text-gray-400 text-left mt-10 " style="width: 45em;">
+		Lorem ipsum dolor sit amet, consectetur adipiscing
+		elit, sed do eiusmod tempor incididunt ut labore e
+	   t dolore magna aliqua. sed do eiusmod tempor incididunt ut labore e
+	   t dolore magna aliqua.
+	   
+	</p>
+</div>
+	<div class="flex-col justify-end p-10">	
+		<div class="flex justify-center lg:ml-96 pt-10">
+
+		<p class= "tracking-2 text-gray-400 font-semibold text-left mt-10 ">
+			We are the best in this field
+		</p>
+		</div>
+			<div class="flex justify-end">
+		 <p class= " text-gray-400  text-left mt-10 " style="width: 30em;">
+					Cetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco la boris nisi ut aliquip ex ea commodo consequat.
+		 </p></div>
+	</div>
+</section>
+<section class=" bg-cover bg-no-repeat" style="background-color: #341C3D;">
+	<div class="flex justify-center  p-28 pt-48  lg:pt-10"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 13.535V3h8v2h-6v12a4 4 0 1 1-2-3.465zM10 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill="rgba(216,91,31,1)"/></svg></div>
+	<div class="-mt-20"><h5 class="text-center text-4xl font-bold tracking-tight text-gray-900 dark:text-white">Gallery</h5></div>
+	<div class="flex justify-center w-75 ">	
+		<p class= "text-gray-400 text-left mt-10 " style="width: 45em;">
+			Lorem ipsum dolor sit amet, consectetur adipiscing
+			elit, sed do eiusmod tempor incididunt ut labore e
+		   t dolore magna aliqua. sed do eiusmod tempor incididunt ut labore e
+		   t dolore magna aliqua.
+		   
+		</p>
+	</div>	
+<div class="container lg:px-32 px-4 py-20 mx-auto items-center ">
+  <div class="grid grid-cols-4 grid-rows-4 grid-flow-col gap-2">
+    <div class="w-full row-span-2">
+      <img
+        src="./img/pexels-cottonbro-studio-3171839.jpg"
+        alt="Photo by Claudio Schwarz on Unsplash"
+        class="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100">
+    </div>
+
+	<!-- test -->
+    <div class="w-full col-span-2 row-span-2">
+      <img
+	  class="h-full w-full"
+        src="./img/matty-adame-nLUb9GThIcg-unsplash.jpg"
+        alt="Photo by Claudio Schwarz on Unsplash"
+        class="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 ">
+    </div>
+	<!-- T2 -->
+    <div class="w-full ">
+      <img
+	  class="h-full"
+        src="./img/pexels-luis-quintero-2091383.jpg"
+        alt="Photo by Claudio Schwarz on Unsplash"
+        class="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 ">
+    </div>
+    <div class="w-full">
+      <img
+	  class="h-full"
+        src="./img/pexels-davide-de-giovanni-1649693.jpg"
+        alt="Photo by Claudio Schwarz on Unsplash"
+        class="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 ">
+    </div>
+    <div class="w-full col-span-2 row-span-2">
+      <img
+	    class="h-full"
+        src="./img/pexels-thibault-trillet-167386.jpg"
+        alt="Photo by Claudio Schwarz on Unsplash"
+        class="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 ">
+    </div>
+   
+    <div class="w-full col-span-2">
+      <img
+	  class="h-full"
+	          src="./img/pexels-salah-alawadhi-382297.jpg"
+        alt="Photo by Claudio Schwarz on Unsplash"
+        class="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 ">
+    </div>
+    <div class="w-full">
+      <img
+	  class="h-full"
+        src="./img/pexels-edward-eyer-1587292.jpg"
+        alt="Photo by Claudio Schwarz on Unsplash"
+        class="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 ">
+    </div>
+    <div class="w-full">
+      <img
+	  class="h-full"
+        src="./img/pexels-pixabay-51330.jpg"
+        alt="Photo by Claudio Schwarz on Unsplash"
+        class="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 ">
+    </div>
+  </div>
+</div>
+</section>
+<section class=" bg-cover bg-no-repeat" style="background-color: #341C3D;">
+	<div class="flex justify-center  p-28 pt-48  lg:pt-10"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 13.535V3h8v2h-6v12a4 4 0 1 1-2-3.465zM10 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill="rgba(216,91,31,1)"/></svg></div>
+	<div class="-mt-20"><h5 class="text-center text-4xl font-bold tracking-tight text-gray-900 dark:text-white">Testimonials</h5></div>
+	<div class="flex justify-center w-75 ">	
+		<p class= "text-gray-400 text-left mt-10 " style="width: 45em;">
+			Lorem ipsum dolor sit amet, consectetur adipiscing
+			elit, sed do eiusmod tempor incididunt ut labore e
+		   t dolore magna aliqua. sed do eiusmod tempor incididunt ut labore e
+		   t dolore magna aliqua.
+		   
+		</p>
+	</div>	
+
+</section>
+<section class=" bg-cover bg-no-repeat" style="background-image:url('./bg/bghome3.jpg')">
+	<div class="flex justify-center  p-28 pt-48  lg:pt-10"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 13.535V3h8v2h-6v12a4 4 0 1 1-2-3.465zM10 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill="rgba(216,91,31,1)"/></svg></div>
+	<div class="-mt-20"><h5 class="text-center text-4xl font-bold tracking-tight text-gray-900 dark:text-white">Contact Us</h5></div>
+	<div class="flex justify-center w-75 ">	
+		<p class= "text-gray-400 text-left mt-10 " style="width: 45em;">
+			Lorem ipsum dolor sit amet, consectetur adipiscing
+			elit, sed do eiusmod tempor incididunt ut labore e
+		   t dolore magna aliqua. sed do eiusmod tempor incididunt ut labore e
+		   t dolore magna aliqua.
+		   
+		</p>
+	</div>	
+
+</section>
+    <!-- mobile -->
+	<div class="navbar-menu relative z-50 hidden">
+		<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+		<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+			<div class="flex items-center mb-8">
+                <a class="text-3xl font-bold leading-none" href="#">
+                    <img src="./bg/logo.png" class="w-20 h-20 "  alt="" srcset="" />
+            </a>
+				<button class="navbar-close">
+					<svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+			<div>
+				<ul>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Home</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">About Us</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Services</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Pricing</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Contact</a>
+					</li>
+				</ul>
+			</div>
+			<div class="mt-auto">
+				<div class="pt-6">
+					<a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl" href="#">Sign in</a>
+					<a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl" href="#">Sign Up</a>
+				</div>
+				<p class="my-4 text-xs text-center text-gray-400">
+					<span>Copyright © 2021</span>
+				</p>
+			</div>
+		</nav>
+	</div>
+
+</body>
+
+<script>
+// Burger menus
+document.addEventListener('DOMContentLoaded', function() {
+    // open
+    const burger = document.querySelectorAll('.navbar-burger');
+    const menu = document.querySelectorAll('.navbar-menu');
+
+    if (burger.length && menu.length) {
+        for (var i = 0; i < burger.length; i++) {
+            burger[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+
+    // close
+    const close = document.querySelectorAll('.navbar-close');
+    const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+    if (close.length) {
+        for (var i = 0; i < close.length; i++) {
+            close[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+
+    if (backdrop.length) {
+        for (var i = 0; i < backdrop.length; i++) {
+            backdrop[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+});
+</script>
+</html>
