@@ -1,68 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
-    <link href="https://unpkg.com/tailwindcss@^2.2.7/dist/tailwind.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
-<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-<!-- cssannimation -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-</head>
-<main class="profile-page">
-    <nav class="relative px-4 py-4 flex justify-between items-center bg-transparent">
-		<div class="lg:hidden">
-			<button class="navbar-burger flex items-center text-blue-600 p-3">
-				<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-					<title>Mobile menu</title>
-					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-				</svg>
-			</button>
-		</div>
-		<ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-11">
-			<li><a class="font-medium text-sm text-gray-400 hover:text-gray-500" href="#">Home</a></li>
-			<li><a class="font-medium text-sm text-gray-400 hover:text-gray-500" href="#">Tickets</a></li>
-
-			<li><a class=" font-medium text-sm text-gray-400 hover:text-gray-500 " href="#">About Us</a></li>
-			<li>
-			<a class="text-3xl font-bold leading-none" href="#">
-                <img src="./bg/logo.png" class="w-20 h-20 "  alt="" srcset="" />
-		    </a></li>
-			<li><a class=" font-medium text-sm text-gray-400 hover:text-gray-500" href="#">Services</a></li>
-			
-			<li><a class="font-medium text-sm text-gray-400 hover:text-gray-500" href="#">Pricing</a></li>
-		
-			<li><a class="font-medium text-sm text-gray-400 hover:text-gray-500" href="#">Contact</a></li>
-		</ul>
-		<a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200" href="#">Sign In</a>
-		<a class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href="#">Sign up</a>
-	</nav>
-
-  <section class="relative block h-500-px">
-    <div class="absolute top-0 w-full h-full bg-center bg-cover" style="
-            background-image: url('./img/pexels-trinity-kubassek-342520.jpg');
-          ">
-      <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span>
-    </div>
-    <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px" style="transform: translateZ(0px)">
-      <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
-        <polygon class="text-blueGray-200 fill-current" points="2560 0 2560 100 0 100"></polygon>
-      </svg>
-    </div>
-  </section>
-  <section class="relative py-16 " style="background-color: #341C3D;">
+<section class="relative py-16 " style="background-color: #341C3D;">
     <div class="container mx-auto px-4">
       <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
         <div class="px-6">
           <div class="flex flex-wrap justify-center">
             <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
               <div class="relative">
-                <img alt="..." src="./img/ethan-rheams-fEM9otYJK4c-unsplash.jpg" class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px ">
+                <img alt="..." src="{{asset('build/assets/images/ethan-rheams-fEM9otYJK4c-unsplash.jpg')}}" class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px ">
               </div>
             </div>
             <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
@@ -90,7 +33,7 @@
             <h3 class="text-4xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
               Jenna Stones
             </h3>
-         
+
           </div>
           <div class="mt-10 py-10 border-t border-blueGray-200 text-center">
             <div class="flex flex-wrap justify-center">
@@ -109,12 +52,12 @@
       </div>
     </div>
     <!-- posts -->
-    <section class="relative pt-2 pb-2 " data-aos="zoom-in-down" > 
+    <section class="relative pt-2 pb-2 " data-aos="zoom-in-down" >
         <div class="container mx-auto px-4">
           <div class="flex flex-wrap items-center md:justify-between justify-center">
             <div class="w-full md:w-6/12 px-4 mx-auto text-center">
               <div class="text-sm text-blueGray-500 font-semibold py-1">
-      
+
                   <div class="container mx-auto px-20">
                       <div >
                     <div class="p-3 px-6 min-h-48 flex justify-center items-center" style="cursor: auto;">
@@ -122,7 +65,7 @@
                         <div class="rounded-md shadow-md sm:w-96 bg-coolGray-900 text-coolGray-100" style='background-color:rgba(217, 217, 217, 0.59);'>
                           <div class="flex items-center justify-between p-3" style="cursor: auto;">
                             <div class="flex items-center space-x-2" style="cursor: auto;">
-                              <img src="./img/ethan-rheams-fEM9otYJK4c-unsplash.jpg" alt="" class="object-cover object-center w-8 h-8 rounded-full shadow-sm bg-coolGray-500 border-coolGray-700" style="cursor: auto;">
+                              <img src="{{asset('build/assets/images/ethan-rheams-fEM9otYJK4c-unsplash.jpg')}}" alt="" class="object-cover object-center w-8 h-8 rounded-full shadow-sm bg-coolGray-500 border-coolGray-700" style="cursor: auto;">
                               <div class="-space-y-1" style="cursor: auto;">
                                 <h2 class="text-sm font-semibold leading-none text-black " style="cursor: auto;">External_</h2>
                                 <span class="inline-block text-xs leading-none  text-black " style="cursor: auto;">New York City</span>
@@ -136,7 +79,7 @@
                               </svg>
                             </button>
                           </div>
-                          <img src="./img/pexels-pixabay-358129.jpg" alt="" class="object-cover object-center w-full h-72 bg-coolGray-500" style="cursor: auto;">
+                          <img src="{{asset('build/assets/images/pexels-pixabay-358129.jpg')}}" alt="" class="object-cover object-center w-full h-72 bg-coolGray-500" style="cursor: auto;">
                           <div class="p-3" style="cursor: auto;">
                             <div class="flex items-center justify-between" style="cursor: auto;">
                               <div class="flex items-center space-x-3">
@@ -168,9 +111,9 @@
                                   <img alt="" class="w-5 h-5 border rounded-full bg-coolGray-500 border-coolGray-800" src="https://stackdiary.com/140x100.png">
                                   <img alt="" class="w-5 h-5 border rounded-full bg-coolGray-500 border-coolGray-800" src="https://stackdiary.com/140x100.png">
                                   <img alt="" class="w-5 h-5 border rounded-full bg-coolGray-500 border-coolGray-800" src="https://stackdiary.com/140x100.png">-->
-                                
-                                <span class="text-sm"  style="color: black;"> Liked by 
-                                  <span class="font-semibold" style="color: black;">Pixels</span> and 
+
+                                <span class="text-sm"  style="color: black;"> Liked by
+                                  <span class="font-semibold" style="color: black;">Pixels</span> and
                                   <span class="font-semibold" style="color: black;">20 others</span>
                                 </span>
                               </div>
@@ -178,14 +121,14 @@
                             <div class="space-y-3" style="cursor: auto;">
                              <form action="">
                               <input type="text" placeholder="Add a comment..." class="w-full py-0.5 bg-transparent border-none rounded text-sm pl-0 text-coolGray-100" style="cursor: auto;">
-                          </form> 
+                          </form>
                           </div>
                           </div>
                         </div>
                       </custom-card3>
                     </div>
                     </div>
-                    </div> 
+                    </div>
       </div>
             </div>
           </div>
@@ -193,12 +136,12 @@
       </section>
 
 
-      <section class="relative pt-2 pb-2 " data-aos="zoom-in-down"> 
+      <section class="relative pt-2 pb-2 " data-aos="zoom-in-down">
         <div class="container mx-auto px-4">
           <div class="flex flex-wrap items-center md:justify-between justify-center">
             <div class="w-full md:w-6/12 px-4 mx-auto text-center">
               <div class="text-sm text-blueGray-500 font-semibold py-1">
-      
+
                   <div class="container mx-auto px-20">
                       <div >
                     <div class="p-3 px-6 min-h-48 flex justify-center items-center" style="cursor: auto;">
@@ -206,7 +149,7 @@
                         <div class="rounded-md shadow-md sm:w-96 bg-coolGray-900 text-coolGray-100" style='background-color:rgba(217, 217, 217, 0.59);'>
                           <div class="flex items-center justify-between p-3" style="cursor: auto;">
                             <div class="flex items-center space-x-2" style="cursor: auto;">
-                              <img src="./img/ethan-rheams-fEM9otYJK4c-unsplash.jpg" alt="" class="object-cover object-center w-8 h-8 rounded-full shadow-sm bg-coolGray-500 border-coolGray-700" style="cursor: auto;">
+                              <img src="{{asset('build/assets/images/ethan-rheams-fEM9otYJK4c-unsplash.jpg')}}" alt="" class="object-cover object-center w-8 h-8 rounded-full shadow-sm bg-coolGray-500 border-coolGray-700" style="cursor: auto;">
                               <div class="-space-y-1" style="cursor: auto;">
                                 <h2 class="text-sm font-semibold leading-none text-black " style="cursor: auto;">External_</h2>
                                 <span class="inline-block text-xs leading-none  text-black " style="cursor: auto;">New York City</span>
@@ -220,7 +163,7 @@
                               </svg>
                             </button>
                           </div>
-                          <img src="./img/pexels-giorgio-paradisi-2705089.jpg" alt="" class="object-cover object-center w-full h-72 bg-coolGray-500" style="cursor: auto;">
+                          <img src="{{asset('build/assets/images/pexels-giorgio-paradisi-2705089.jpg')}}" alt="" class="object-cover object-center w-full h-72 bg-coolGray-500" style="cursor: auto;">
                           <div class="p-3" style="cursor: auto;">
                             <div class="flex items-center justify-between" style="cursor: auto;">
                               <div class="flex items-center space-x-3">
@@ -252,9 +195,9 @@
                                   <img alt="" class="w-5 h-5 border rounded-full bg-coolGray-500 border-coolGray-800" src="https://stackdiary.com/140x100.png">
                                   <img alt="" class="w-5 h-5 border rounded-full bg-coolGray-500 border-coolGray-800" src="https://stackdiary.com/140x100.png">
                                   <img alt="" class="w-5 h-5 border rounded-full bg-coolGray-500 border-coolGray-800" src="https://stackdiary.com/140x100.png">-->
-                                
-                                <span class="text-sm"  style="color: black;"> Liked by 
-                                  <span class="font-semibold" style="color: black;">Pixels</span> and 
+
+                                <span class="text-sm"  style="color: black;"> Liked by
+                                  <span class="font-semibold" style="color: black;">Pixels</span> and
                                   <span class="font-semibold" style="color: black;">20 others</span>
                                 </span>
                               </div>
@@ -262,231 +205,17 @@
                             <div class="space-y-3" style="cursor: auto;">
                              <form action="">
                               <input type="text" placeholder="Add a comment..." class="w-full py-0.5 bg-transparent border-none rounded text-sm pl-0 text-coolGray-100" style="cursor: auto;">
-                          </form> 
+                          </form>
                           </div>
                           </div>
                         </div>
                       </custom-card3>
                     </div>
                     </div>
-                    </div> 
+                    </div>
       </div>
             </div>
           </div>
         </div>
       </section>
   </section>
-</main>
-<!-- footer -->
-<footer class=" text-center text-white" style="background-image:linear-gradient(90deg, #341C3D 10.94%, #341C3D 29.69%, #3f3045 48.44%, #DD703B 66.15%, #DB662D 80.73%, #D85B1F 97.4%);" >
-	<div class="container flex flex-col lg:flex-row ">
-		<a class=" text-3xl font-bold leading-none" href="#">
-			<img src="./bg/logo.png" class="w-40 h-40 "  alt="" srcset="" />
-		</a>
-	  <div class="flex justify-between w-96 mx-auto px-6 pt-14 py-10 lg\:py-0">
-		<a
-		  href="#!"
-		  type="button"
-		  class="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
-		  data-te-ripple-init
-		  data-te-ripple-color="light">
-		  <svg
-			xmlns="http://www.w3.org/2000/svg"
-			class="mx-auto h-full w-4"
-			fill="currentColor"
-			viewBox="0 0 24 24">
-			<path
-			  d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
-		  </svg>
-		</a>
-  
-		<a
-		  href="#!"
-		  type="button"
-		  class="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
-		  data-te-ripple-init
-		  data-te-ripple-color="light">
-		  <svg
-			xmlns="http://www.w3.org/2000/svg"
-			class="mx-auto h-full w-4"
-			fill="currentColor"
-			viewBox="0 0 24 24">
-			<path
-			  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
-		  </svg>
-		</a>
-  
-		<a
-		  href="#!"
-		  type="button"
-		  class="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
-		  data-te-ripple-init
-		  data-te-ripple-color="light">
-		  <svg
-			xmlns="http://www.w3.org/2000/svg"
-			class="mx-auto h-full w-4"
-			fill="currentColor"
-			viewBox="0 0 24 24">
-			<path
-			  d="M7 11v2.4h3.97c-.16 1.029-1.2 3.02-3.97 3.02-2.39 0-4.34-1.979-4.34-4.42 0-2.44 1.95-4.42 4.34-4.42 1.36 0 2.27.58 2.79 1.08l1.9-1.83c-1.22-1.14-2.8-1.83-4.69-1.83-3.87 0-7 3.13-7 7s3.13 7 7 7c4.04 0 6.721-2.84 6.721-6.84 0-.46-.051-.81-.111-1.16h-6.61zm0 0 17 2h-3v3h-2v-3h-3v-2h3v-3h2v3h3v2z"
-			  fill-rule="evenodd"
-			  clip-rule="evenodd" />
-		  </svg>
-		</a>
-  
-		<a
-		  href="#!"
-		  type="button"
-		  class="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
-		  data-te-ripple-init
-		  data-te-ripple-color="light">
-		  <svg
-			xmlns="http://www.w3.org/2000/svg"
-			class="mx-auto h-full w-4"
-			fill="currentColor"
-			viewBox="0 0 24 24">
-			<path
-			  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-		  </svg>
-		</a>
-  
-		<a
-		  href="#!"
-		  type="button"
-		  class="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
-		  data-te-ripple-init
-		  data-te-ripple-color="light">
-		  <svg
-			xmlns="http://www.w3.org/2000/svg"
-			class="mx-auto h-full w-4"
-			fill="currentColor"
-			viewBox="0 0 24 24">
-			<path
-			  d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
-		  </svg>
-		</a>
-  
-		<a
-		  href="#!"
-		  type="button"
-		  class="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
-		  data-te-ripple-init
-		  data-te-ripple-color="light">
-		  <svg
-			xmlns="http://www.w3.org/2000/svg"
-			class="mx-auto h-full w-4"
-			fill="currentColor"
-			viewBox="0 0 24 24">
-			<path
-			  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-		  </svg>
-		</a>
-	  </div>
-	</div>
-  
-	<div
-	  class="p-4 text-center"
-	  style="background-color: rgba(0, 0, 0, 0.2)">
-	  © Party Makers
-	 	  <a class="text-whitehite" href="https://tailwind-elements.com/"
-		> Party / Music Event by fadwa cherqui</a
-	  >
-	</div>
-  </footer>
-
-    <!-- mobile -->
-	<div class="navbar-menu relative z-50 hidden">
-		<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-		<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
-			<div class="flex items-center mb-8">
-                <a class="text-3xl font-bold leading-none" href="#">
-                    <img src="./bg/logo.png" class="w-20 h-20 "  alt="" srcset="" />
-            </a>
-				<button class="navbar-close">
-					<svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-					</svg>
-				</button>
-			</div>
-			<div>
-				<ul>
-					<li class="mb-1">
-						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Home</a>
-					</li>
-					<li class="mb-1">
-						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">About Us</a>
-					</li>
-					<li class="mb-1">
-						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Services</a>
-					</li>
-					<li class="mb-1">
-						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Pricing</a>
-					</li>
-					<li class="mb-1">
-						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Contact</a>
-					</li>
-				</ul>
-			</div>
-			<div class="mt-auto">
-				<div class="pt-6">
-					<a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl" href="#">Sign in</a>
-					<a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl" href="#">Sign Up</a>
-				</div>
-				<p class="my-4 text-xs text-center text-gray-400">
-					<span>Copyright © 2021</span>
-				</p>
-			</div>
-		</nav>
-	</div>
-
-</body>
-
-<!-- script nav -->
-<script>
-// Burger menus
-document.addEventListener('DOMContentLoaded', function() {
-    // open
-    const burger = document.querySelectorAll('.navbar-burger');
-    const menu = document.querySelectorAll('.navbar-menu');
-
-    if (burger.length && menu.length) {
-        for (var i = 0; i < burger.length; i++) {
-            burger[i].addEventListener('click', function() {
-                for (var j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle('hidden');
-                }
-            });
-        }
-    }
-
-    // close
-    const close = document.querySelectorAll('.navbar-close');
-    const backdrop = document.querySelectorAll('.navbar-backdrop');
-
-    if (close.length) {
-        for (var i = 0; i < close.length; i++) {
-            close[i].addEventListener('click', function() {
-                for (var j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle('hidden');
-                }
-            });
-        }
-    }
-
-    if (backdrop.length) {
-        for (var i = 0; i < backdrop.length; i++) {
-            backdrop[i].addEventListener('click', function() {
-                for (var j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle('hidden');
-                }
-            });
-        }
-    }
-});
-</script>
-<!-- script annimation -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-	AOS.init();
-  </script>
-</html>
