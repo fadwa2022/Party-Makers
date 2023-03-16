@@ -11,11 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('styles', function (Blueprint $table) {
-            $table->id();
-            $table->string('style_name');
-            $table->timestamps();
-        });
+        Schema::table('events', function (Blueprint $table) {
+            $table->integer('ourevent')->nullable();
+                });
     }
 
     /**
@@ -23,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('style');
+        Schema::table('events', function (Blueprint $table) {
+            //
+        });
     }
 };

@@ -1,6 +1,6 @@
 <section class="container-fluid flex-col justify-center items-center   bg-cover bg-no-repeat "  >
     <div class="flex justify-center  p-28 pt-48 lg:pt-10"></div>
-    <div class="-mt-20"><h5 class="tracking-widest text-center text-5xl font-bold tracking-tight text-gray-900 dark:text-white">PARTY MAKERS</h5></div>
+    <div class="-mt-20"><h5 class="tracking-widest text-center text-5xl font-bold tracking-tight text-white dark:text-white">PARTY MAKERS</h5></div>
 
         <div class="flex-col justify-end p-10" data-aos="flip-left"
         data-aos-easing="ease-out-cubic"

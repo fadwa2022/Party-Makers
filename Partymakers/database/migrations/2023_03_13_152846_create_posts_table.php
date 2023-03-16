@@ -13,7 +13,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('posts', function (Blueprint $table) {
-            $table->increments('id_post');
+            $table->id();
             $table->foreignId('DJ-creat')->constrained('users');
             $table->string('Imagepost');
             $table->string('Contenu');

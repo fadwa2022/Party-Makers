@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\Tables;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Tablescontroller;
+use App\Http\Controllers\TablesController;
 use App\Http\Controllers\ProfileController;
 
 /*
@@ -43,7 +44,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 Route::middleware('auth')->group(function () {
-    Route::get('/tables', [Tablescontroller::class, 'tables'])->name('tables');
+    Route::get('/tables', [TablesController::class, 'tables'])->name('tables');
 
 });
 

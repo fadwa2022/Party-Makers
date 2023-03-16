@@ -13,7 +13,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('sponsors', function (Blueprint $table) {
-            $table->increments('NumeroSponsorisation');
+            $table->id();
             $table->string('message');
             $table->string('situation');
             $table->foreignId('sponsor')->constrained('users');

@@ -13,7 +13,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('events', function (Blueprint $table) {
-            $table->increments('NumeroEvent');
+            $table->id();
             $table->foreignId('style')->constrained('styles');
             $table->string('Localisation');
             $table->foreignId('DJ')->constrained('users');
