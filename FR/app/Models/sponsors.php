@@ -12,5 +12,11 @@ class sponsors extends Model
         'situation',
 
     ];
+    public function scopeFilter($query, array $filters)
+    {
+        if ($filters['searchsponsor'] ?? false) {
+            $query->Where('situation', 'like','%'.request('searchsponsor').'%');
+        }
+    }
     use HasFactory;
 }

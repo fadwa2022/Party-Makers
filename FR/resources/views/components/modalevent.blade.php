@@ -31,7 +31,7 @@
                          <div class="md:flex md:items-center mb-6">
                           <div class="md:w-80  px-10">
                               <label class="text-white font-semibold p-4" for="">number of spaces</label>
-                             <input name="NumeroPlace" class="md:h-12 bg-gray-500 bg-opacity-50 appearance-none rounded w-full py-2 px-4 text-gray-800 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" name="PrixEvent" min="1" placeholder="Total number of spaces">
+                             <input name="NumeroPlace" class="md:h-12 bg-gray-500 bg-opacity-50 appearance-none rounded w-full py-2 px-4 text-gray-800 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name"  type="number"  min="1" placeholder="Total number of spaces">
                          </div>
                     </div>
 

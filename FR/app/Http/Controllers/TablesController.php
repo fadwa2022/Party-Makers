@@ -6,7 +6,9 @@ use App\Models\User;
 use App\Models\Events;
 use App\Models\Styles;
 use App\Models\sponsors;
+use App\Models\tickets;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Console\Scheduling\Event;
 use NunoMaduro\Collision\Adapters\Phpunit\Style;
@@ -14,22 +16,101 @@ use NunoMaduro\Collision\Adapters\Phpunit\Style;
 class TablesController extends Controller
 {
     //
-    public function tables(){
-         $ourEvents= Events::where('ourevent',1)->join('styles', 'styles.id', '=', 'events.style')
-         ->join('users as dj', 'dj.id', '=', 'events.DJ')
-         ->join('users as creator', 'creator.id', '=', 'events.createur')
-         ->select('events.*', 'styles.style_name','dj.name as DJ_name', 'creator.name as creator_name')
-         ->get();
-         $Eventsclient= Events::where('ourevent',NULL)->join('styles', 'styles.id', '=', 'events.style')
-         ->join('users as dj', 'dj.id', '=', 'events.DJ')
-         ->join('users as creator', 'creator.id', '=', 'events.createur')
-         ->select('events.*', 'styles.style_name','dj.name as DJ_name', 'creator.name as creator_name')
-         ->get();
+    public function tables(Request $request){
+        $sort = $request->get('sort');
+
+// price sort events
+        if($sort=='price_asc'){
+            $ourEvents= Events::where('ourevent',1)->join('styles', 'styles.id', '=', 'events.style')
+            ->join('users as dj', 'dj.id', '=', 'events.DJ')
+            ->join('users as creator', 'creator.id', '=', 'events.createur')
+            ->select('events.*', 'styles.style_name','dj.name as DJ_name', 'creator.name as creator_name')
+            ->orderBy('PrixEvent','asc')
+            ->get();
+        }elseif($sort=='price_desc'){
+            $ourEvents= Events::where('ourevent',1)->join('styles', 'styles.id', '=', 'events.style')
+            ->join('users as dj', 'dj.id', '=', 'events.DJ')
+            ->join('users as creator', 'creator.id', '=', 'events.createur')
+            ->select('events.*', 'styles.style_name','dj.name as DJ_name', 'creator.name as creator_name')
+            ->orderBy('PrixEvent','desc')
+            ->get();
+        }elseif($sort=='date_asc'){
+            $ourEvents= Events::where('ourevent',1)->join('styles', 'styles.id', '=', 'events.style')
+            ->join('users as dj', 'dj.id', '=', 'events.DJ')
+            ->join('users as creator', 'creator.id', '=', 'events.createur')
+            ->select('events.*', 'styles.style_name','dj.name as DJ_name', 'creator.name as creator_name')
+            ->orderBy('dateEvent','asc')
+            ->get();
+       }elseif($sort=='date_desc'){
+            $ourEvents= Events::where('ourevent',1)->join('styles', 'styles.id', '=', 'events.style')
+            ->join('users as dj', 'dj.id', '=', 'events.DJ')
+            ->join('users as creator', 'creator.id', '=', 'events.createur')
+            ->select('events.*', 'styles.style_name','dj.name as DJ_name', 'creator.name as creator_name')
+            ->orderBy('dateEvent','desc')
+            ->get();
+       }else{
+            $ourEvents= Events::where('ourevent',1)->join('styles', 'styles.id', '=', 'events.style')
+            ->join('users as dj', 'dj.id', '=', 'events.DJ')
+            ->join('users as creator', 'creator.id', '=', 'events.createur')
+            ->select('events.*', 'styles.style_name','dj.name as DJ_name', 'creator.name as creator_name')
+            ->filter(request(['search']))
+            ->get();
+           }
+
+
+
+
+
+
+
+
+// date sort events
+
+if($sort=='priceclient_asc'){
+    $Eventsclient= Events::where('ourevent',NULL)->join('styles', 'styles.id', '=', 'events.style')
+    ->join('users as dj', 'dj.id', '=', 'events.DJ')
+    ->join('users as creator', 'creator.id', '=', 'events.createur')
+    ->select('events.*', 'styles.style_name','dj.name as DJ_name', 'creator.name as creator_name')
+    ->orderBy('PrixEvent','asc')
+    ->get();
+}elseif($sort=='priceclient_desc'){
+    $Eventsclient= Events::where('ourevent',NULL)->join('styles', 'styles.id', '=', 'events.style')
+    ->join('users as dj', 'dj.id', '=', 'events.DJ')
+    ->join('users as creator', 'creator.id', '=', 'events.createur')
+    ->select('events.*', 'styles.style_name','dj.name as DJ_name', 'creator.name as creator_name')
+    ->orderBy('PrixEvent','desc')
+    ->get();
+}elseif($sort=='dateclient_asc'){
+             $Eventsclient= Events::where('ourevent',NULL)->join('styles', 'styles.id', '=', 'events.style')
+             ->join('users as dj', 'dj.id', '=', 'events.DJ')
+             ->join('users as creator', 'creator.id', '=', 'events.createur')
+             ->select('events.*', 'styles.style_name','dj.name as DJ_name', 'creator.name as creator_name')
+             ->orderBy('dateEvent','asc')
+             ->get();
+        }elseif($sort=='dateclient_desc'){
+             $Eventsclient= Events::where('ourevent',NULL)->join('styles', 'styles.id', '=', 'events.style')
+             ->join('users as dj', 'dj.id', '=', 'events.DJ')
+             ->join('users as creator', 'creator.id', '=', 'events.createur')
+             ->select('events.*', 'styles.style_name','dj.name as DJ_name', 'creator.name as creator_name')
+             ->orderBy('dateEvent','desc')
+             ->get();
+        }else{
+             $Eventsclient= Events::where('ourevent',NULL)->join('styles', 'styles.id', '=', 'events.style')
+             ->join('users as dj', 'dj.id', '=', 'events.DJ')
+             ->join('users as creator', 'creator.id', '=', 'events.createur')
+             ->select('events.*', 'styles.style_name','dj.name as DJ_name', 'creator.name as creator_name')
+             ->filter(request(['search2']))
+             ->get();
+        }
+
+
+
          $Style=Styles::get();
          $DJS= User::where('Role',1)->get();
          $Sponsor= User::where('Role',2)->get();
          $Client= User::where('Role',NULL)->get();
-         $sponsorisation = sponsors::get();
+         $sponsorisation = sponsors::filter(request(['searchsponsor']))
+         ->get();
         return view('tables.tables', [
             'Events' => $ourEvents,
             'clientEvents' => $Eventsclient,
@@ -38,10 +119,12 @@ class TablesController extends Controller
             'Client'=>$Client,
             'sponsorisation'=>$sponsorisation,
             'Style'=>$Style
-]);
+                ]);
       }
 
+// event
 
+// update
       public function updateevent(Request $request, $Event)
       {
           $event = Events::findOrFail($Event);
@@ -56,7 +139,7 @@ class TablesController extends Controller
         $formFields['createur']=auth()->id();
           $event->update($formFields);
 
-          return redirect('/dashboard')->with('message','Event updated successfully');
+          return redirect()->route('tables')->with('message', 'Event updated successfully');
       }
 
       public function updateeventclient(Request $request, $Event)
@@ -66,10 +149,63 @@ class TablesController extends Controller
 
           $Event->update($formFields);
 
-          return redirect('/dashboard')->with('message','Event updated successfully');
+          return redirect()->route('tables')->with('message','Event updated successfully');
       }
 
-      public function updatesponsorisation(Request $request, $sponsorisation)
+
+//   delete
+    public function  deleteevent($Event){
+        $Event = Events::findOrFail($Event);
+        $Event->delete();
+        return redirect()->route('tables')->with('message','event deleted successfully');
+
+}
+     public function deleteeventclient($Event){
+        $Event = Events::findOrFail($Event);
+        $Event->delete();
+        return redirect()->route('tables')->with('message','event deleted successfully');
+     }
+
+
+
+// addevent
+
+public function makeevent(Request $request)
+{
+    $formFields = $request->validate([
+        'style' => 'required',
+        'Localisation' => 'required',
+        'DJ' => 'required',
+        'dateEvent' => 'required',
+        'PrixEvent' => 'required',
+        'NumeroPlace' => 'required',
+        'Imageevent' => 'required'
+    ]);
+
+    $formFields['createur'] =auth()->id();
+    $formFields['ourevent'] = 1;
+    $formFields['typeEvent'] = 'public';
+
+    if($request->hasFile('Imageevent')){
+        $formFields['Imageevent'] = $request->file('Imageevent')->store('images', 'public');
+    }
+   Events::create($formFields);
+
+   $lastId = DB::table('events')->max('id');
+   $nombretickets= $formFields['NumeroPlace'];
+   for ($i = 0; $i < $nombretickets; $i++) {
+
+       $formFieldsticket['numeroevent'] = $lastId ;
+   tickets::create($formFieldsticket);
+
+   }
+   return redirect()->route('tables')->with('message', 'Event created successfully');
+}
+
+
+// sponsor
+
+public function updatesponsorisation(Request $request, $sponsorisation)
       {
 
           $sponsorisation = sponsors::findOrFail($sponsorisation);
@@ -78,46 +214,20 @@ class TablesController extends Controller
 
           $sponsorisation->update($formFields);
 
-          return redirect('/dashboard')->with('message','Event updated successfully');
+          return redirect()->route('tables')->with('message','sponsorisation updated successfully');
       }
-      public function  deleteevent($Event){
-        $Event = Events::findOrFail($Event);
-        $Event->delete();
-        return Redirect('/dashboard')->with('message','book deleted successfully');
-     }
-     public function deleteeventclient($Event){
-        $Event = Events::findOrFail($Event);
-        $Event->delete();
-        return Redirect('/dashboard')->with('message','book deleted successfully');
-     }
-     public function deleteuser($user){
+
+
+// user
+public function deleteuser($user){
 
         $user = User::findOrFail($user);
         $user->delete();
-        return Redirect('/dashboard')->with('message','book deleted successfully');
-     }
+        return redirect()->route('tables')->with('message','dj deleted successfully');
+ }
 
-     public function makeevent(Request $request)
-     {
-         $formFields = $request->validate([
-             'style' => 'required',
-             'Localisation' => 'required',
-             'DJ' => 'required',
-             'dateEvent' => 'required',
-             'PrixEvent' => 'required',
-             'NumeroPlace' => 'required',
-             'Imageevent' => 'required'
-         ]);
 
-         $formFields['ourevent'] = 1;
-         $formFields['typeEvent'] = 'public';
 
-         if($request->hasFile('Imageevent')){
-             $formFields['Imageevent'] = $request->file('Imageevent')->store('images', 'public');
-         }
 
-         Event::create($formFields);
 
-         return redirect('/dashboard')->with('message', 'Event created successfully');
-     }
-    }
+}

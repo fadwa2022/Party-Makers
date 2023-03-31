@@ -21,8 +21,21 @@ class Events extends Model
     'NumeroPlace',
     'Imageevent',
     'situation',
-    'ourevent'
+    'ourevent',
+    'createur'
 ];
+public function scopeFilter($query, array $filters)
+    {
+        if ($filters['search'] ?? false) {
+            $query->where('style', 'like','%'.request('search').'%')
+                ->orWhere('Localisation', 'like','%'.request('search').'%');
+        }
+        if ($filters['search2'] ?? false) {
+            $query->where('style', 'like','%'.request('search2').'%')
+                ->orWhere('Localisation', 'like','%'.request('search2').'%')
+                ->orWhere('situation', 'like','%'.request('search2').'%') ;
+        }
+    }
 // public function style()
 // {
 //     return $this->belongsTo(Styles::class,'style');

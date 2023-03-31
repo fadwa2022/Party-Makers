@@ -1,4 +1,4 @@
-@props(['clientEvents'])
+@props(['clientEvents','Style'])
 
 
 <div class="flex justify-between	 ">
@@ -9,6 +9,30 @@
 <br>
 <div class="overflow-x-auto">
 
+    <form class="p-5">
+        <div class="flex">
+                    <select id="stylec" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" style="background-color: #1f2937">
+                                          <option value="">Style</option>
+                    @foreach($Style as $style)
+                        <option value="{{$style->id}}">{{$style->style_name}}</option>
+                        @endforeach
+                    </select>
+                    <select   id="situation" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" style="background-color: #1f2937" >
+                        <option>situation</option>
+                        <option value="Refuser">Refuser</option>
+                        <option value="Accepter">Accepter</option>
+                      </select>
+            <div class="relative w-2/5">
+
+                <input name="search2" type="search" id="search-dropdown" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500" placeholder="Search Localisation " >
+
+                <button type="submit" class="absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-blue-700 rounded-r-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    <span class="sr-only">Search</span>
+                </button>
+            </div>
+        </div>
+    </form>
     <table
       class="min-w-full divide-y-2 divide-gray-200 text-sm dark:divide-gray-700"
     >
@@ -34,11 +58,13 @@
         >
         DJ
             </th>
-            <th
-            class="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900 dark:text-white"
-          >
-          PrixEvent
-          </th>
+          <th class="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900 dark:text-white flex justify-between">
+            <div>PrixEvent</div>
+          <div class="flex">
+             <a href="{{ URL::current()."?sort=priceclient_desc" }}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 8l6 6H6z" fill="rgba(255,255,255,1)"/></svg></a>
+             <a href="{{ URL::current()."?sort=priceclient_asc" }}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 16l-6-6h12z" fill="rgba(255,255,255,1)"/></svg></a>
+         </div>
+         </th>
           <th
           class="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900 dark:text-white"
         >
@@ -50,11 +76,14 @@
           >
           Localisation
           </th>
-          <th
-            class="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900 dark:text-white"
-          >
-          dateEvent
-          </th>
+
+          <th class="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900 dark:text-white flex justify-between">
+            <div>dateEvent</div>
+          <div class="flex">
+             <a href="{{ URL::current()."?sort=dateclient_desc" }}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 8l6 6H6z" fill="rgba(255,255,255,1)"/></svg></a>
+             <a href="{{ URL::current()."?sort=dateclient_asc" }}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 16l-6-6h12z" fill="rgba(255,255,255,1)"/></svg></a>
+         </div>
+         </th>
           <th
             class="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900 dark:text-white"
           >
@@ -158,3 +187,14 @@ class="whitespace-nowrap px-4 py-2 text-gray-700 dark:text-gray-200"
       </tbody>
     </table>
   </div>
+  <script>
+    document.getElementById('stylec').addEventListener('change', function() {
+        var styleId = this.value;
+        window.location.href = 'http://127.0.0.1:8000/tables?search2=' + styleId ;
+    });
+    document.getElementById('situation').addEventListener('change', function() {
+        var situationId = this.value;
+        window.location.href = 'http://127.0.0.1:8000/tables?search2=' + situationId ;
+    });situation
+
+</script>
