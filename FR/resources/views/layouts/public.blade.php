@@ -8,7 +8,7 @@
         <title>PartyMakers</title>
         <link rel="icon" href="{{asset('build/assets/bg/logo.png')}}" />
 <!-- cssannimation -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">

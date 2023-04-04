@@ -1,5 +1,4 @@
 <x-public-layout>
-
 <section class="bg-cover bg-no-repeat" style="background-color: #341c3d">
 
    @include('layouts.navbare')

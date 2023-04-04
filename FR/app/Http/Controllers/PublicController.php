@@ -10,10 +10,7 @@ class PublicController extends Controller
     {
         return view('public.home');
     }
-    public function tickets()
-    {
-        return view('public.tickets');
-    }
+ 
     public function partymakers()
     {
         return view('public.partymakers');
