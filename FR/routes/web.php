@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\TablesController;
 use App\Http\Controllers\ProfileController;
@@ -21,7 +22,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/yourtickets/{event}', [TicketsController::class, 'yourticket'])->name('tickets');
 
 Route::get('/home', [PublicController::class, 'home'])->name('home');
 
@@ -42,7 +42,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::middleware('auth')->group(function(){
+    Route::get('/yourtickets/{event}', [TicketsController::class, 'yourticket']);
 
+});
 
 Route::group(['middleware' => ['auth', 'admin']], function () {
 
@@ -62,6 +65,7 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 
 
 });
+Route::post('/sendmail', [HomeController::class, 'sendContactForm']);
 
 
 require __DIR__.'/auth.php';

@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Events;
 use App\Models\tickets;
-use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class TicketsController extends Controller
 {
@@ -37,15 +38,24 @@ class TicketsController extends Controller
         $tickets = tickets::where('achateur',null)
                             ->where('numeroevent', $eventid)
                             ->get();
+
         $name = auth()->user() ? auth()->user()->name : 'no connection has been detected';
 
-        // $qrCode = QrCode::size(200)->generate($tickets[0]->id);
+        $qrCode = QrCode::size(200)->generate($tickets[0]->id);
+
+
+ //update ticket
+ $tickettoupdate = Tickets::findOrFail($tickets[0]->id);
+ $tickettoupdate->achateur = auth()->id();
+ $tickettoupdate->save();
 
         return view('public.yourticket',
         [
             'event'=>$event,
             'ticket'=>$tickets[0],
-            'user'=>$name
+            'user'=>$name,
+            'qrCode' => $qrCode
+
 
         ]
     );

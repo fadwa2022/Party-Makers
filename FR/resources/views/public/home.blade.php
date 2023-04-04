@@ -21,7 +21,6 @@
 <!-- section contact -->
 <section class=" bg-cover bg-no-repeat" style="background-image:url('{{asset('build/assets/bg/bghome3.jpg')}}">
     @include('public.partials.section5')
-
 </section>
 
 </x-public-layout>

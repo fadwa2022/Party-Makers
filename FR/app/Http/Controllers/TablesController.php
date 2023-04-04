@@ -158,7 +158,11 @@ class TablesController extends Controller
     public function  deleteevent($Event)
     {
         $Event = Events::findOrFail($Event);
+    // supprimer les tickets d event
+        $tickets = Tickets::where('numeroevent', $Event)->delete();
+
         $Event->delete();
+
         return redirect()->route('tables')->with('message', 'event deleted successfully');
     }
     public function deleteeventclient($Event)
