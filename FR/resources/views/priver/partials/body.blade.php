@@ -12,8 +12,11 @@
                     <label for="file-input">
                       <img id="image-preview" alt="..." src="{{ asset('storage/'.$Dj[0]->image) }}"  class="shadow-xl rounded-full align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px max-h-150-px cursor-pointer">
                     </label>
+                    @if(auth()->id() == $id)
+
                     <input id="file-input" type="file" onchange="submit()" style="display:none;" name="image">
-                  </div>
+                @endif
+                </div>
                 </form>
                 </div>
 
@@ -86,7 +89,7 @@
                               </div>
                             </div>
 
-                            @if($post->DJ_create == $id)
+                            @if($post->DJ_create == auth()->id())
 
                             <form method="POST" action="/deletepost/{{$post->id}}">
                                 @csrf

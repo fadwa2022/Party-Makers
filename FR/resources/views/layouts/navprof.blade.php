@@ -22,13 +22,15 @@
         <a class="text-3xl font-bold leading-none" href="#">
             <x-application-logo-2  />
         </a></li>
-        <x-nav-link class="font-medium text-sm text-gray-400 hover:text-gray-500"  :href="route('login')" :active="request()->routeIs('login')">
-            {{ __('Services') }}
+        <x-nav-link class="font-medium text-sm text-gray-400 hover:text-gray-500"  :href="route('Monprofile')" :active="request()->routeIs('Monprofile')">
+            {{ __('profile') }}
         </x-nav-link>
-        <x-nav-link class="font-medium text-sm text-gray-400 hover:text-gray-500"  :href="route('login')" :active="request()->routeIs('login')">
-            {{ __('Pricing') }}
-        </x-nav-link>
-        <x-nav-link class="font-medium text-sm text-gray-400 hover:text-gray-500"  :href="route('login')" :active="request()->routeIs('login')">
+    @if (auth()->user()->Role == 'dj')
+    <x-nav-link class="font-medium text-sm text-gray-400 hover:text-gray-500"  href="/profileDJ/{{auth()->id()}}" :active="request()->routeIs('Monprofile')">
+        {{ __('DJprofile') }}
+    </x-nav-link>
+    @endif
+        <x-nav-link class="font-medium text-sm text-gray-400 hover:text-gray-500"  :href="route('home')" :active="request()->routeIs('login')">
             {{ __('Contact') }}
         </x-nav-link>
 

@@ -20,15 +20,12 @@ use App\Http\Controllers\ProfilePublicController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/sponsor', [PublicController::class, 'sponsor'])->name('sponsor');
-Route::post('/Addsponsorship', [PublicController::class, 'makesponsor'])->name('sponsor');
-Route::put('/dj/{id}', [ProfilePublicController::class, 'dj'])->name('sponsor');
+Route::post('/Addsponsorship', [PublicController::class, 'makesponsor'])->middleware('auth');
+Route::put('/dj', [ProfilePublicController::class, 'dj'])->middleware('auth');
 
 Route::get('/home', [PublicController::class, 'home'])->name('home');
+Route::get('/', [PublicController::class, 'home'])->name('home');
 
 Route::get('/tickets', [TicketsController::class, 'tickets'])->name('tickets');
 
@@ -37,13 +34,11 @@ Route::get('/partymakers', [MakersController::class, 'partymakers'])->name('part
 Route::get('/profileDJ/{id}', [ProfilePublicController::class, 'profileDJ'])->name('profileDJ');
 
 
-Route::group(['middleware' => ['auth','Dj']], function () {
+Route::group(['middleware' => ['auth','dj']], function () {
 
     Route::put('/updatedj/{id}', [ProfilePublicController::class, 'updateDj']);
-    Route::get('/dashborddj/{name}', [ProfilePublicController::class, 'dashbord']);
+    Route::get('/dashborddj/{name}', [ProfilePublicController::class, 'dashboard']);
     Route::post('/makepost', [ProfilePublicController::class, 'makepost']);
-    Route::get('/updatelikes/{id}', [ProfilePublicController::class, 'updatelikes']);
-    Route::post('/makecomments/{id}', [ProfilePublicController::class, 'makecomments']);
     Route::delete('/deletepost/{id}', [ProfilePublicController::class, 'deletepost']);
 
 });
@@ -68,7 +63,8 @@ Route::middleware('auth')->group(function(){
 
     Route::get('/yourtickets/{event}', [TicketsController::class, 'yourticket']);
     Route::post('/makeeventclient/{style}', [MakersController::class, 'makeeventclient']);
-
+    Route::post('/makecomments/{id}', [ProfilePublicController::class, 'makecomments']);
+    Route::get('profileDJ/updatelikes/{id}', [ProfilePublicController::class, 'updatelikes']);
 });
 
 Route::group(['middleware' => ['auth', 'admin']], function () {

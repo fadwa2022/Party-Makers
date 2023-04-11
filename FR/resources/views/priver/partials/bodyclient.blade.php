@@ -4,11 +4,13 @@
         <div class="px-6">
           <div class="flex flex-wrap justify-center">
 
-          <div class="text-center mt-12">
+          <div class="text-center mt-12 ">
             <h3 class="text-4xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
                 {{$Client[0]->name}}
                    </h3>
-
+                   <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                   <a href="profile">Edit profile</a>
+                  </button>
           </div>
           <div class="mt-10 py-10 border-t border-blueGray-200 text-center">
             <div class="flex flex-wrap justify-center">
@@ -75,7 +77,7 @@
             Situation
         </th>
 
-                                                </tr>
+        </tr>
         </thead>
 
         <tbody>

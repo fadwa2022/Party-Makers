@@ -84,6 +84,7 @@
         document.getElementById("numeroticket").innerHTML= filteredTickets[0];
         } else {
         document.getElementById("numeroticket").innerHTML= "All tickets for this event have been sold";
+        // ici il faut sue je cach ticket button
         }
 
                 document.getElementById("dateevent").innerHTML = date;

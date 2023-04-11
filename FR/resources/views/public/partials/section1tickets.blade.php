@@ -85,7 +85,7 @@
               Make Your
             </button> --}}
 
-            <a href="#" class="m-4 text-white text-s font-semibold p-2  rounded" style="background-color: #C9C9C9">
+            <a href="partymakers" class="m-4 text-white text-s font-semibold p-2  rounded" style="background-color: #C9C9C9">
                 Make Your Event
               </a>
 

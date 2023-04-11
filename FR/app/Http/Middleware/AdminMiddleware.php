@@ -20,7 +20,7 @@ class AdminMiddleware
             // Si l'utilisateur est authentifié et a le rôle d'administrateur, passez à la requête suivante
             return $next($request);
         }
-        if ($request->user() && $request->user()->Role === 'Dj') {
+        if ($request->user() && $request->user()->Role === 'dj') {
             // Si l'utilisateur est authentifié et a le rôle d'administrateur, passez à la requête suivante
             return $next($request);
         }

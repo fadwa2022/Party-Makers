@@ -35,15 +35,17 @@
                     </svg>
                 </button>
             </div>
+            @if (optional(auth()->user())->Role !== 'dj')
             <div class="p-10">
-                <form method="POST" action="/dj/{{auth()->id()}}" enctype="multipart/form-data">
+                <form method="POST" action="/dj" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                 <button class=" tracking-tight bg-pink-600 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded">
                     If you are a DJ, come join us in our group
                 </button>
-                <form action=""></form>
+                </form>
             </div>
+            @endif
         </div>
 
         <div class="-mx-6 lg:col-span-2 lg:mx-0">

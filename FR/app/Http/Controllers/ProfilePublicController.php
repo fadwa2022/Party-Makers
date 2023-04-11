@@ -49,7 +49,7 @@ class ProfilePublicController extends Controller
 
         return redirect()->route('profileDJ', ['id' => $id]);
     }
-    public function dashbord(Request $request)
+    public function dashboard(Request $request)
     {
         $sort = $request->get('sort');
 
@@ -104,7 +104,6 @@ class ProfilePublicController extends Controller
     }
 
     public function makecomments(Request $request,$id){
-
         $formFields = $request->validate([
             'contenu' => 'required',
         ]);
@@ -124,7 +123,8 @@ class ProfilePublicController extends Controller
         $post->delete();
         return redirect()->route('profileDJ', ['id' =>auth()->id()]);
     }
-    public function dj($id){
+    public function dj(){
+        $id=auth()->id();
         $dj = User::findOrFail($id);
         $formFields['Role'] = 'dj';
         $dj->update($formFields);
@@ -171,14 +171,13 @@ class ProfilePublicController extends Controller
     // update
     public function updateevent(Request $request, $Event)
     {
-
         $event = Events::findOrFail($Event);
+
         $formFields = $request->validate([
             'style' => 'required',
             'Localisation' => 'required',
             'DJ' => 'required',
             'dateEvent' => 'required',
-            'PrixEvent' => 'required',
             'NumeroPlace' => 'required',
         ]);
 
