@@ -39,6 +39,18 @@
           class="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900 dark:text-white"
         >
         sponsor            </th>
+        <th
+        class="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900 dark:text-white"
+      >
+      sponsor email        </th>
+      <th
+        class="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900 dark:text-white"
+      >
+      sponsor phone       </th>
+      <th
+        class="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900 dark:text-white"
+      >
+      event       </th>
             <th
             class="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900 dark:text-white"
           >
@@ -67,9 +79,25 @@
           <td
             class="whitespace-nowrap px-4 py-2 text-gray-700 dark:text-gray-200"
           >
-          {{$sponsorisation->sponsor}}
+          {{$sponsorisation->sponsor_name}}
 
           </td>
+          <td
+          class="whitespace-nowrap px-4 py-2 text-gray-700 dark:text-gray-200"
+        >
+        {{$sponsorisation->sponsor_email}}
+
+        </td>
+        <td
+        class="whitespace-nowrap px-4 py-2 text-gray-700 dark:text-gray-200"
+      >
+      {{$sponsorisation->phone}}
+      </td>
+      <td
+      class="whitespace-nowrap px-4 py-2 text-gray-700 dark:text-gray-200"
+    >
+    {{$sponsorisation->Localisation}}
+    </td>
           <td
             class="whitespace-nowrap px-4 py-2 text-gray-700 dark:text-gray-200"
           >

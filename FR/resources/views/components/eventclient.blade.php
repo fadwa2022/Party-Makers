@@ -171,7 +171,7 @@ class="whitespace-nowrap px-4 py-2 text-gray-700 dark:text-gray-200"
 <td
 class="whitespace-nowrap px-4 py-2 text-gray-700 dark:text-gray-200"
 >
-<form method="POST" action="/deleteeventclient/{{$Event->id}}">
+<form method="POST" action="/deleteevent/{{$Event->id}}">
     @csrf
     @method('DELETE')
     <button class="text-red-500"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">

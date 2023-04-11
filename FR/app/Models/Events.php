@@ -26,7 +26,7 @@ class Events extends Model
 ];
 public function scopeFilter($query, array $filters)
     {
-        if ($filters['search'] ?? false) {
+        if ($filters['search'] ?? false ) {
             $query->where('style', 'like','%'.request('search').'%')
                 ->orWhere('Localisation', 'like','%'.request('search').'%');
         }

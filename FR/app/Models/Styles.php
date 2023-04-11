@@ -9,7 +9,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Styles extends Model
 {
 
+    protected $fillable = [
+        'style_name',
+        'image_style'
 
+    ];
     use HasFactory;
     //   protected $table='styles';
 

@@ -7,8 +7,8 @@
 
     </section>
     @include('public.partials.s2makers')
+    {{-- @include('public.partials.modale') --}}
     @include('public.partials.s3makers')
-    @include('public.partials.modale')
 
 </x-public-layout>
 </div>

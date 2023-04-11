@@ -18,6 +18,8 @@ class TablesController extends Controller
     //
     public function tables(Request $request)
     {
+        $perPage=6;
+
         $sort = $request->get('sort');
 
         // price sort events
@@ -108,10 +110,14 @@ class TablesController extends Controller
 
         $Style = Styles::get();
         $DJS = User::where('Role', 'Dj')->get();
-        $Sponsor = User::where('Role', 2)->get();
+        $Sponsor = User::where('Role', 'sponsor')->get();
         $Client = User::where('Role', NULL)->get();
-        $sponsorisation = sponsors::filter(request(['searchsponsor']))
-            ->get();
+        $sponsorisation = sponsors::join('users as sponsor', 'sponsor.id', '=', 'sponsors.sponsor')
+        ->join('events as event', 'event.id', '=', 'sponsors.event')
+        ->select('sponsors.*','sponsor.name as sponsor_name', 'sponsor.email as sponsor_email','event.Localisation as Localisation')
+        ->filter(request(['searchsponsor']))
+        ->get();
+
         return view('tables.tables', [
             'Events' => $ourEvents,
             'clientEvents' => $Eventsclient,
@@ -165,12 +171,7 @@ class TablesController extends Controller
 
         return redirect()->route('tables')->with('message', 'event deleted successfully');
     }
-    public function deleteeventclient($Event)
-    {
-        $Event = Events::findOrFail($Event);
-        $Event->delete();
-        return redirect()->route('tables')->with('message', 'event deleted successfully');
-    }
+
 
 
 
@@ -193,10 +194,6 @@ class TablesController extends Controller
         $formFields['typeEvent'] = 'public';
 
         if ($request->hasFile('Imageevent')) {
-            // $file_name=pathinfo($request->file('Imageevent')->getClientOriginalName(),PATHINFO_FILENAME);
-            // $file_name_ext=strtolower($request->file('Imageevent')->getClientOriginalExtension());
-            // $formFields['Imageevent'] =$request->file('Imageevent')->move(public_path('imagesevents'), $file_name.".".$file_name_ext);
-            //
             $formFields['Imageevent'] = $request->file('Imageevent')->store('images', 'public');
 
         }
@@ -225,6 +222,47 @@ class TablesController extends Controller
         $sponsorisation->update($formFields);
 
         return redirect()->route('tables')->with('message', 'sponsorisation updated successfully');
+    }
+    // style
+    public function  deleteStyle($Style)
+    {
+        $Style = Styles::findOrFail($Style);
+        $Style->delete();
+
+        return redirect()->route('tables')->with('message', 'Style deleted successfully');
+     }
+
+    public function updateStyle(Request $request, $Style)
+    {
+        $Style = Styles::findOrFail($Style);
+        $formFields = $request->validate([
+            'style_name' => 'required',
+        ]);
+        $Style->update($formFields);
+
+        return redirect()->route('tables')->with('message', 'Event updated successfully');
+    }
+
+    public function makestyle(Request $request)
+    {
+        $formFields = $request->validate([
+            'style_name' => 'required',
+
+        ]);
+
+
+
+        if ($request->hasFile('image_style')) {
+
+            $formFields['image_style'] = $request->file('image_style')->store('images', 'public');
+
+        }
+    //   dd($formFields);
+
+        Styles::create($formFields);
+
+
+        return redirect()->route('tables')->with('message', 'style created successfully');
     }
 
 

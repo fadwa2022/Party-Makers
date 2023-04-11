@@ -8,9 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class sponsors extends Model
 {
     protected $fillable = [
-
+        'event',
+        'phone',
+        'message',
+        'sponsor',
         'situation',
-
     ];
     public function scopeFilter($query, array $filters)
     {

@@ -1,7 +1,10 @@
 	<!-- body -->
 	<section class="p-10">
-	    <h5 class="p-10 text-xl lg:text-4xl font-bold tracking-tight text-gray-900 dark:text-pink-700">Upcoming Events</h5>
-	    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+	   <div class="flex justify-between">
+        <h5 class="p-10 text-xl lg:text-4xl font-bold tracking-tight text-gray-900 dark:text-pink-700">Upcoming Events</h5>
+
+      </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 	        @foreach($Events as $Event)
 	        <div class="max-w-sm mx-5 rounded overflow-hidden shadow-lg sm:flex-row flex-col">
 	            <img class="w-full" src="{{ asset('storage/'.$Event->Imageevent) }}" alt="Event">
@@ -65,6 +68,8 @@
             	        </div>
 
 	        @endforeach
+            {{ $Events->links() }}
+
 	    </div>
 
 	    <script>
@@ -101,4 +106,5 @@
 
 
 	    </script>
+
 	</section>

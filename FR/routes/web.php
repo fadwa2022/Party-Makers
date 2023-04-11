@@ -2,10 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MakersController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\TablesController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TicketsController;
+use App\Http\Controllers\ProfilePublicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,14 +24,31 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/sponsor', [PublicController::class, 'sponsor'])->name('sponsor');
+Route::post('/Addsponsorship', [PublicController::class, 'makesponsor'])->name('sponsor');
+Route::put('/dj/{id}', [ProfilePublicController::class, 'dj'])->name('sponsor');
 
 Route::get('/home', [PublicController::class, 'home'])->name('home');
 
 Route::get('/tickets', [TicketsController::class, 'tickets'])->name('tickets');
 
-Route::get('/partymakers', [PublicController::class, 'partymakers'])->name('partymakers');
+Route::get('/partymakers', [MakersController::class, 'partymakers'])->name('partymakers');
 
-Route::get('/profileDJ', [PublicController::class, 'profileDJ'])->name('profileDJ');
+Route::get('/profileDJ/{id}', [ProfilePublicController::class, 'profileDJ'])->name('profileDJ');
+
+
+Route::group(['middleware' => ['auth','Dj']], function () {
+
+    Route::put('/updatedj/{id}', [ProfilePublicController::class, 'updateDj']);
+    Route::get('/dashborddj/{name}', [ProfilePublicController::class, 'dashbord']);
+    Route::post('/makepost', [ProfilePublicController::class, 'makepost']);
+    Route::get('/updatelikes/{id}', [ProfilePublicController::class, 'updatelikes']);
+    Route::post('/makecomments/{id}', [ProfilePublicController::class, 'makecomments']);
+    Route::delete('/deletepost/{id}', [ProfilePublicController::class, 'deletepost']);
+
+});
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -43,7 +62,12 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware('auth')->group(function(){
+    Route::get('Monprofile', [ProfilePublicController::class, 'profileClient'])->name('Monprofile');
+    Route::delete('/deleteeventclient/{Event}', [ProfilePublicController::class, 'deleteeventclient']);
+    Route::put('/updateevent/{Event}', [ProfilePublicController::class, 'updateevent']);
+
     Route::get('/yourtickets/{event}', [TicketsController::class, 'yourticket']);
+    Route::post('/makeeventclient/{style}', [MakersController::class, 'makeeventclient']);
 
 });
 
@@ -54,17 +78,22 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::put('/event/{Event}', [TablesController::class, 'updateevent']);
     Route::put('/eventc/{Event}', [TablesController::class, 'updateeventclient']);
     Route::put('/sponsorisation/{sponsorisation}', [TablesController::class, 'updatesponsorisation']);
+    Route::put('/Style/{Style}', [TablesController::class, 'updateStyle']);
 
     Route::delete('/deleteevent/{Event}', [TablesController::class, 'deleteevent']);
-    Route::delete('/deleteeventclient/{Event}', [TablesController::class, 'deleteeventclient']);
+    Route::delete('/deletestyle/{Style}', [TablesController::class, 'deleteStyle']);
     Route::delete('/deleteSponsorship/{sponsorisation}', [TablesController::class, 'deleteSponsorship']);
     Route::delete('/deleteuser/{user}', [TablesController::class, 'deleteuser']);
 
     Route::post('/makeevent', [TablesController::class, 'makeevent']);
-
+    Route::post('/makestyle', [TablesController::class, 'makestyle']);
 
 
 });
+
+
+
+
 Route::post('/sendmail', [HomeController::class, 'sendContactForm']);
 
 
