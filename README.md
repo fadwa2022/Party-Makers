@@ -1,14 +1,13 @@
 # Party-Makers
-Makers Party est un site web qui permet à chaque personne de créer une fête personnalisée en y ajoutant sa touche personnelle. Les autres utilisateurs ont également la possibilité de rejoindre des "partys" existantes en achetant des tickets. Le site permet également aux DJs de créer un profil personnel . Il y a également une section dédiée à la sponsorship qui permet de soumettre une demande à l'administrateur du site, qui est responsable de la gestion des fêtes, des DJs et des sponsorships.
+Party Makers est un site web qui permet à chaque personne de créer une fête personnalisée en y ajoutant sa touche personnelle. Les autres utilisateurs ont également la possibilité de rejoindre des "partys" existantes en achetant des tickets. Le site permet également aux DJs de créer un profil personnel . Il y a également une section dédiée à la sponsorship qui permet de soumettre une demande à l'administrateur du site, qui est responsable de la gestion des fêtes, des DJs et des sponsorships.
 # Technologies
 * HTML5
 * CSS3
 * TAILWIND
 * JAVASCRIPT
-* VUE JS
 * PHP
 * LARAVEL
-* JSON
+* Blade
 * SQL
 # CONCAPTION UML
 ## USE CASE
