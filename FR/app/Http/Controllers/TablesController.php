@@ -192,6 +192,7 @@ class TablesController extends Controller
         $formFields['createur'] = auth()->id();
         $formFields['ourevent'] = 1;
         $formFields['typeEvent'] = 'public';
+        $formFields['situation'] = 'Accepter';
 
         if ($request->hasFile('Imageevent')) {
             $formFields['Imageevent'] = $request->file('Imageevent')->store('images', 'public');

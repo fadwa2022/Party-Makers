@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Events;
 use App\Models\Styles;
 use App\Models\tickets;
+use Illuminate\Console\Scheduling\Event;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -18,11 +19,12 @@ class TicketsController extends Controller
         $date =$request->get('searchdate');
 
         $Events = Events::where('typeEvent', 'public')
-        ->where('situation', ['Accepter'])
+        ->where('situation', 'Accepter')
         ->join('styles', 'styles.id', '=', 'events.style')
         ->join('users as dj', 'dj.id', '=', 'events.DJ')
         ->join('users as creator', 'creator.id', '=', 'events.createur')
         ->select('events.*', 'styles.style_name', 'dj.name as DJ_name', 'creator.name as creator_name');
+
 
 if ($date) {
     $Events->whereDate('dateEvent', '=', $date);

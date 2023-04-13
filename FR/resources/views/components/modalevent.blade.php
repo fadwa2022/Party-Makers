@@ -41,7 +41,7 @@
                         <div class="md:w-80 px-10 ">
                             <label class="text-white font-semibold p-4" for="">date</label>
 
-                            <input class="md:h-12 bg-gray-500 bg-opacity-50 appearance-none  rounded w-full py-2 px-4 text-gray-800 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="date" name="dateEvent" placeholder="date">
+                            <input class="md:h-12 bg-gray-500 bg-opacity-50 appearance-none  rounded w-full py-2 px-4 text-gray-800 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="date" name="dateEvent" placeholder="date"  min="{{ date('Y-m-d') }}">
                         </div>
                     </div>
                     <div class="md:flex md:items-center mb-6">

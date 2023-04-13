@@ -22,7 +22,7 @@
 
         <li>
             <a class="text-3xl font-bold leading-none" href="#">
-                <x-application-logo-2 />
+                <x-application-logo-2/>
             </a>
         </li>
         @if (optional(auth()->user())->Role !== 'admin')
@@ -79,6 +79,7 @@
 
 </nav>
 <!-- mobile -->
+
 <div class="navbar-menu relative z-50 hidden">
     <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
     <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
@@ -98,19 +99,55 @@
                     <x-nav-link class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" :href="route('home')">Home</x-nav-link>
                 </li>
                 <li class="mb-1">
-                    <x-nav-link class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" :href="route('login')">About</x-nav-link>
+                    <x-nav-link class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" :href="route('tickets')">Tickets</x-nav-link>
 
                 </li>
                 <li class="mb-1">
-                    <x-nav-link class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" :href="route('login')">Services</x-nav-link>
+                    <x-nav-link class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" :href="route('partymakers')">Makers</x-nav-link>
 
                 </li>
+
+                @if (optional(auth()->user())->Role !== 'admin')
                 <li class="mb-1">
-                    <x-nav-link class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" :href="route('login')">Pricing</x-nav-link>
+                <x-nav-link class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" :href="route('Monprofile')" :active="request()->routeIs('Monprofile')">
+                    {{ __('profile') }}
+                </x-nav-link>
+                </li>
+                @endif
+                @auth
+            @if (optional(auth()->user())->Role == 'dj')
+            <li class="mb-1">
+                <x-nav-link class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="/profileDJ/{{auth()->id()}}" >
+                    {{ __('DJprofile') }}
+                </x-nav-link>
+            </li>
+                @endif
+                @endauth
+                @if (optional(auth()->user())->Role !== 'admin')
+                <li class="mb-1">
+                <x-nav-link class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" :href="route('sponsor')" :active="request()->routeIs('sponsor')">
+                    {{ __('Sponsor') }}
+                </x-nav-link>
+                </li>
+                @endif
+                @auth
+                @if (optional(auth()->user())->Role == 'admin')
+                <li class="mb-1">
+                <x-nav-link class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="dashboard" :active="request()->routeIs('dashboard')">
+                    {{ __('Dashbord') }}
+                </x-nav-link>
                 </li>
                 <li class="mb-1">
-                    <x-nav-link class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" :href="route('login')">Contact</x-nav-link>
+                <x-nav-link class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="profile" :active="request()->routeIs('profile')">
+                    {{ __('Profile') }}
+                </x-nav-link>
                 </li>
+                @endif
+                @endauth
+
+                <x-nav-link class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" :href="route('login')" :active="request()->routeIs('login')">
+                    {{ __('Contact') }}
+                </x-nav-link>
             </ul>
         </div>
         <div class="mt-auto">
