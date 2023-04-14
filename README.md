@@ -19,15 +19,14 @@ ainsi ya la partie de sponsorisation.
 ![](https://github.com/fadwa2022/IMAGEMP/blob/main/images/use%20case.png)
 
 ##  CLASSE
-<p aligne="center">
-<img  aligne="center" width="80%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/diagramme%20classe.png">
- 
+![](https://github.com/fadwa2022/IMAGEMP/blob/main/images/diagramme%20classe.png)
+
 ## SEQUENCE
 <p aligne="center">
-<img  aligne="center" width="80%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/AS.png">
-<img  aligne="center" width="80%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/cs.png">
-  <img  aligne="center" width="80%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/ds.png">
-  <img  aligne="center" width="80%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/ss.png">
+<img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/AS.png">
+<img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/cs.png">
+  <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/ds.png">
+  <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/ss.png">
 </p>
 
 # MAQUETTE
