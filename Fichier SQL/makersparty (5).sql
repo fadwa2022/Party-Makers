@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 06 avr. 2023 à 12:31
+-- Généré le : ven. 07 avr. 2023 à 16:51
 -- Version du serveur : 10.4.27-MariaDB
 -- Version de PHP : 8.2.0
 
@@ -20,6 +20,20 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `makersparty`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `commments`
+--
+
+CREATE TABLE `commments` (
+  `id` int(11) NOT NULL,
+  `contenu` varchar(255) NOT NULL,
+  `post` int(11) NOT NULL,
+  `updated_at` date NOT NULL DEFAULT current_timestamp(),
+  `created_at` date DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -49,10 +63,10 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`id`, `style`, `Localisation`, `DJ`, `typeEvent`, `dateEvent`, `PrixEvent`, `NumeroPlace`, `createur`, `Imageevent`, `situation`, `ourevent`, `updated_at`, `created_at`) VALUES
-(40, 10, 'Joel Powers', 4, 'privé', '2023-10-24', NULL, 45, 4, 'images/vju9mw7ZSwq3cN8IKqj4H3f3XxrjJ0QMBFrZr7St.jpg', 'Accepter', NULL, '2023-04-05', '2023-04-05'),
-(44, 12, 'Kyra Spencer', 4, 'privé', '2023-03-10', NULL, 93, 1, 'images/d8Ol51UK37Inxyfvz40dhRJzrx5aYuZozfEBz7YK.jpg', 'Not Yet', NULL, '2023-04-05', '2023-04-05'),
-(45, 10, 'Amethyst Benjamin', 4, 'public', '2023-09-13', 10, 18, 1, 'images/PuI9GAJQgZdeSHigcaNDnaed5Xwo3FYi4WP9tOPf.jpg', 'Accepter', NULL, '2023-04-05', '2023-04-05'),
-(46, 9, 'Brenden Whitfield', 5, 'public', '2023-10-05', 18, 21, 1, 'images/EbhuNhUcUUsOtodqqIrtbxoFxoVhifCE9bgA3R5i.jpg', 'Accepter', NULL, '2023-04-05', '2023-04-05');
+(51, 9, 'Beck Kline', 1, 'public', '2023-04-27', 61, 7, 1, 'images/ThNxk91XUgdYXoseFWe8B4E58m93Qflb4nrKYc6v.jpg', 'Accepter', NULL, '2023-04-06', '2023-04-06'),
+(52, 10, 'Odysseus Strickland', 6, 'public', '1995-12-06', 87, 27, 6, 'images/b3rEpLsDDNrsVwc8tPKWc5kO0wE4lbbZUAdXScpY.jpg', 'Not Yet', NULL, '2023-04-07', '2023-04-07'),
+(53, 11, 'Ian Christensen', 6, 'public', '1972-08-10', 80, 68, 6, 'images/ai55CoRHxqpzbhMzxS9gIFUyQtn820e15v7fchgn.jpg', 'Not Yet', NULL, '2023-04-07', '2023-04-07'),
+(54, 9, 'Alea James', 6, 'public', '2023-04-18', 26, 1, 6, 'images/dgxupzA4MyuWHY1T6RZuk6a1Z82b8fdZqYB6ycQP.jpg', 'Accepter', NULL, '2023-04-07', '2023-04-07');
 
 -- --------------------------------------------------------
 
@@ -126,6 +140,22 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `posts`
+--
+
+CREATE TABLE `posts` (
+  `id` int(11) NOT NULL,
+  `DJ-create` bigint(20) UNSIGNED NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `Position` varchar(255) DEFAULT NULL,
+  `Likes` int(11) NOT NULL DEFAULT 0,
+  `updated_at` date NOT NULL DEFAULT current_timestamp(),
+  `created_at` date NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `sponsors`
 --
 
@@ -189,138 +219,109 @@ CREATE TABLE `tickets` (
 --
 
 INSERT INTO `tickets` (`id`, `numeroevent`, `achateur`, `updated_at`, `created_at`) VALUES
-(28864, 44, NULL, '2023-04-05', '2023-04-05'),
-(28865, 44, NULL, '2023-04-05', '2023-04-05'),
-(28866, 44, NULL, '2023-04-05', '2023-04-05'),
-(28867, 44, NULL, '2023-04-05', '2023-04-05'),
-(28868, 44, NULL, '2023-04-05', '2023-04-05'),
-(28869, 44, NULL, '2023-04-05', '2023-04-05'),
-(28870, 44, NULL, '2023-04-05', '2023-04-05'),
-(28871, 44, NULL, '2023-04-05', '2023-04-05'),
-(28872, 44, NULL, '2023-04-05', '2023-04-05'),
-(28873, 44, NULL, '2023-04-05', '2023-04-05'),
-(28874, 44, NULL, '2023-04-05', '2023-04-05'),
-(28875, 44, NULL, '2023-04-05', '2023-04-05'),
-(28876, 44, NULL, '2023-04-05', '2023-04-05'),
-(28877, 44, NULL, '2023-04-05', '2023-04-05'),
-(28878, 44, NULL, '2023-04-05', '2023-04-05'),
-(28879, 44, NULL, '2023-04-05', '2023-04-05'),
-(28880, 44, NULL, '2023-04-05', '2023-04-05'),
-(28881, 44, NULL, '2023-04-05', '2023-04-05'),
-(28882, 44, NULL, '2023-04-05', '2023-04-05'),
-(28883, 44, NULL, '2023-04-05', '2023-04-05'),
-(28884, 44, NULL, '2023-04-05', '2023-04-05'),
-(28885, 44, NULL, '2023-04-05', '2023-04-05'),
-(28886, 44, NULL, '2023-04-05', '2023-04-05'),
-(28887, 44, NULL, '2023-04-05', '2023-04-05'),
-(28888, 44, NULL, '2023-04-05', '2023-04-05'),
-(28889, 44, NULL, '2023-04-05', '2023-04-05'),
-(28890, 44, NULL, '2023-04-05', '2023-04-05'),
-(28891, 44, NULL, '2023-04-05', '2023-04-05'),
-(28892, 44, NULL, '2023-04-05', '2023-04-05'),
-(28893, 44, NULL, '2023-04-05', '2023-04-05'),
-(28894, 44, NULL, '2023-04-05', '2023-04-05'),
-(28895, 44, NULL, '2023-04-05', '2023-04-05'),
-(28896, 44, NULL, '2023-04-05', '2023-04-05'),
-(28897, 44, NULL, '2023-04-05', '2023-04-05'),
-(28898, 44, NULL, '2023-04-05', '2023-04-05'),
-(28899, 44, NULL, '2023-04-05', '2023-04-05'),
-(28900, 44, NULL, '2023-04-05', '2023-04-05'),
-(28901, 44, NULL, '2023-04-05', '2023-04-05'),
-(28902, 44, NULL, '2023-04-05', '2023-04-05'),
-(28903, 44, NULL, '2023-04-05', '2023-04-05'),
-(28904, 44, NULL, '2023-04-05', '2023-04-05'),
-(28905, 44, NULL, '2023-04-05', '2023-04-05'),
-(28906, 44, NULL, '2023-04-05', '2023-04-05'),
-(28907, 44, NULL, '2023-04-05', '2023-04-05'),
-(28908, 44, NULL, '2023-04-05', '2023-04-05'),
-(28909, 44, NULL, '2023-04-05', '2023-04-05'),
-(28910, 44, NULL, '2023-04-05', '2023-04-05'),
-(28911, 44, NULL, '2023-04-05', '2023-04-05'),
-(28912, 44, NULL, '2023-04-05', '2023-04-05'),
-(28913, 44, NULL, '2023-04-05', '2023-04-05'),
-(28914, 44, NULL, '2023-04-05', '2023-04-05'),
-(28915, 44, NULL, '2023-04-05', '2023-04-05'),
-(28916, 44, NULL, '2023-04-05', '2023-04-05'),
-(28917, 44, NULL, '2023-04-05', '2023-04-05'),
-(28918, 44, NULL, '2023-04-05', '2023-04-05'),
-(28919, 44, NULL, '2023-04-05', '2023-04-05'),
-(28920, 44, NULL, '2023-04-05', '2023-04-05'),
-(28921, 44, NULL, '2023-04-05', '2023-04-05'),
-(28922, 44, NULL, '2023-04-05', '2023-04-05'),
-(28923, 44, NULL, '2023-04-05', '2023-04-05'),
-(28924, 44, NULL, '2023-04-05', '2023-04-05'),
-(28925, 44, NULL, '2023-04-05', '2023-04-05'),
-(28926, 44, NULL, '2023-04-05', '2023-04-05'),
-(28927, 44, NULL, '2023-04-05', '2023-04-05'),
-(28928, 44, NULL, '2023-04-05', '2023-04-05'),
-(28929, 44, NULL, '2023-04-05', '2023-04-05'),
-(28930, 44, NULL, '2023-04-05', '2023-04-05'),
-(28931, 44, NULL, '2023-04-05', '2023-04-05'),
-(28932, 44, NULL, '2023-04-05', '2023-04-05'),
-(28933, 44, NULL, '2023-04-05', '2023-04-05'),
-(28934, 44, NULL, '2023-04-05', '2023-04-05'),
-(28935, 44, NULL, '2023-04-05', '2023-04-05'),
-(28936, 44, NULL, '2023-04-05', '2023-04-05'),
-(28937, 44, NULL, '2023-04-05', '2023-04-05'),
-(28938, 44, NULL, '2023-04-05', '2023-04-05'),
-(28939, 44, NULL, '2023-04-05', '2023-04-05'),
-(28940, 44, NULL, '2023-04-05', '2023-04-05'),
-(28941, 44, NULL, '2023-04-05', '2023-04-05'),
-(28942, 44, NULL, '2023-04-05', '2023-04-05'),
-(28943, 44, NULL, '2023-04-05', '2023-04-05'),
-(28944, 44, NULL, '2023-04-05', '2023-04-05'),
-(28945, 44, NULL, '2023-04-05', '2023-04-05'),
-(28946, 44, NULL, '2023-04-05', '2023-04-05'),
-(28947, 44, NULL, '2023-04-05', '2023-04-05'),
-(28948, 44, NULL, '2023-04-05', '2023-04-05'),
-(28949, 44, NULL, '2023-04-05', '2023-04-05'),
-(28950, 44, NULL, '2023-04-05', '2023-04-05'),
-(28951, 44, NULL, '2023-04-05', '2023-04-05'),
-(28952, 44, NULL, '2023-04-05', '2023-04-05'),
-(28953, 44, NULL, '2023-04-05', '2023-04-05'),
-(28954, 44, NULL, '2023-04-05', '2023-04-05'),
-(28955, 44, NULL, '2023-04-05', '2023-04-05'),
-(28956, 44, NULL, '2023-04-05', '2023-04-05'),
-(28957, 45, NULL, '2023-04-05', '2023-04-05'),
-(28958, 45, NULL, '2023-04-05', '2023-04-05'),
-(28959, 45, NULL, '2023-04-05', '2023-04-05'),
-(28960, 45, NULL, '2023-04-05', '2023-04-05'),
-(28961, 45, NULL, '2023-04-05', '2023-04-05'),
-(28962, 45, NULL, '2023-04-05', '2023-04-05'),
-(28963, 45, NULL, '2023-04-05', '2023-04-05'),
-(28964, 45, NULL, '2023-04-05', '2023-04-05'),
-(28965, 45, NULL, '2023-04-05', '2023-04-05'),
-(28966, 45, NULL, '2023-04-05', '2023-04-05'),
-(28967, 45, NULL, '2023-04-05', '2023-04-05'),
-(28968, 45, NULL, '2023-04-05', '2023-04-05'),
-(28969, 45, NULL, '2023-04-05', '2023-04-05'),
-(28970, 45, NULL, '2023-04-05', '2023-04-05'),
-(28971, 45, NULL, '2023-04-05', '2023-04-05'),
-(28972, 45, NULL, '2023-04-05', '2023-04-05'),
-(28973, 45, NULL, '2023-04-05', '2023-04-05'),
-(28974, 45, NULL, '2023-04-05', '2023-04-05'),
-(28975, 46, NULL, '2023-04-05', '2023-04-05'),
-(28976, 46, NULL, '2023-04-05', '2023-04-05'),
-(28977, 46, NULL, '2023-04-05', '2023-04-05'),
-(28978, 46, NULL, '2023-04-05', '2023-04-05'),
-(28979, 46, NULL, '2023-04-05', '2023-04-05'),
-(28980, 46, NULL, '2023-04-05', '2023-04-05'),
-(28981, 46, NULL, '2023-04-05', '2023-04-05'),
-(28982, 46, NULL, '2023-04-05', '2023-04-05'),
-(28983, 46, NULL, '2023-04-05', '2023-04-05'),
-(28984, 46, NULL, '2023-04-05', '2023-04-05'),
-(28985, 46, NULL, '2023-04-05', '2023-04-05'),
-(28986, 46, NULL, '2023-04-05', '2023-04-05'),
-(28987, 46, NULL, '2023-04-05', '2023-04-05'),
-(28988, 46, NULL, '2023-04-05', '2023-04-05'),
-(28989, 46, NULL, '2023-04-05', '2023-04-05'),
-(28990, 46, NULL, '2023-04-05', '2023-04-05'),
-(28991, 46, NULL, '2023-04-05', '2023-04-05'),
-(28992, 46, NULL, '2023-04-05', '2023-04-05'),
-(28993, 46, NULL, '2023-04-05', '2023-04-05'),
-(28994, 46, NULL, '2023-04-05', '2023-04-05'),
-(28995, 46, NULL, '2023-04-05', '2023-04-05');
+(29175, 51, 1, '2023-04-06', '2023-04-06'),
+(29176, 51, 6, '2023-04-07', '2023-04-06'),
+(29177, 51, NULL, '2023-04-06', '2023-04-06'),
+(29178, 51, NULL, '2023-04-06', '2023-04-06'),
+(29179, 51, NULL, '2023-04-06', '2023-04-06'),
+(29180, 51, NULL, '2023-04-06', '2023-04-06'),
+(29181, 51, NULL, '2023-04-06', '2023-04-06'),
+(29182, 52, NULL, '2023-04-07', '2023-04-07'),
+(29183, 52, NULL, '2023-04-07', '2023-04-07'),
+(29184, 52, NULL, '2023-04-07', '2023-04-07'),
+(29185, 52, NULL, '2023-04-07', '2023-04-07'),
+(29186, 52, NULL, '2023-04-07', '2023-04-07'),
+(29187, 52, NULL, '2023-04-07', '2023-04-07'),
+(29188, 52, NULL, '2023-04-07', '2023-04-07'),
+(29189, 52, NULL, '2023-04-07', '2023-04-07'),
+(29190, 52, NULL, '2023-04-07', '2023-04-07'),
+(29191, 52, NULL, '2023-04-07', '2023-04-07'),
+(29192, 52, NULL, '2023-04-07', '2023-04-07'),
+(29193, 52, NULL, '2023-04-07', '2023-04-07'),
+(29194, 52, NULL, '2023-04-07', '2023-04-07'),
+(29195, 52, NULL, '2023-04-07', '2023-04-07'),
+(29196, 52, NULL, '2023-04-07', '2023-04-07'),
+(29197, 52, NULL, '2023-04-07', '2023-04-07'),
+(29198, 52, NULL, '2023-04-07', '2023-04-07'),
+(29199, 52, NULL, '2023-04-07', '2023-04-07'),
+(29200, 52, NULL, '2023-04-07', '2023-04-07'),
+(29201, 52, NULL, '2023-04-07', '2023-04-07'),
+(29202, 52, NULL, '2023-04-07', '2023-04-07'),
+(29203, 52, NULL, '2023-04-07', '2023-04-07'),
+(29204, 52, NULL, '2023-04-07', '2023-04-07'),
+(29205, 52, NULL, '2023-04-07', '2023-04-07'),
+(29206, 52, NULL, '2023-04-07', '2023-04-07'),
+(29207, 52, NULL, '2023-04-07', '2023-04-07'),
+(29208, 52, NULL, '2023-04-07', '2023-04-07'),
+(29209, 53, NULL, '2023-04-07', '2023-04-07'),
+(29210, 53, NULL, '2023-04-07', '2023-04-07'),
+(29211, 53, NULL, '2023-04-07', '2023-04-07'),
+(29212, 53, NULL, '2023-04-07', '2023-04-07'),
+(29213, 53, NULL, '2023-04-07', '2023-04-07'),
+(29214, 53, NULL, '2023-04-07', '2023-04-07'),
+(29215, 53, NULL, '2023-04-07', '2023-04-07'),
+(29216, 53, NULL, '2023-04-07', '2023-04-07'),
+(29217, 53, NULL, '2023-04-07', '2023-04-07'),
+(29218, 53, NULL, '2023-04-07', '2023-04-07'),
+(29219, 53, NULL, '2023-04-07', '2023-04-07'),
+(29220, 53, NULL, '2023-04-07', '2023-04-07'),
+(29221, 53, NULL, '2023-04-07', '2023-04-07'),
+(29222, 53, NULL, '2023-04-07', '2023-04-07'),
+(29223, 53, NULL, '2023-04-07', '2023-04-07'),
+(29224, 53, NULL, '2023-04-07', '2023-04-07'),
+(29225, 53, NULL, '2023-04-07', '2023-04-07'),
+(29226, 53, NULL, '2023-04-07', '2023-04-07'),
+(29227, 53, NULL, '2023-04-07', '2023-04-07'),
+(29228, 53, NULL, '2023-04-07', '2023-04-07'),
+(29229, 53, NULL, '2023-04-07', '2023-04-07'),
+(29230, 53, NULL, '2023-04-07', '2023-04-07'),
+(29231, 53, NULL, '2023-04-07', '2023-04-07'),
+(29232, 53, NULL, '2023-04-07', '2023-04-07'),
+(29233, 53, NULL, '2023-04-07', '2023-04-07'),
+(29234, 53, NULL, '2023-04-07', '2023-04-07'),
+(29235, 53, NULL, '2023-04-07', '2023-04-07'),
+(29236, 53, NULL, '2023-04-07', '2023-04-07'),
+(29237, 53, NULL, '2023-04-07', '2023-04-07'),
+(29238, 53, NULL, '2023-04-07', '2023-04-07'),
+(29239, 53, NULL, '2023-04-07', '2023-04-07'),
+(29240, 53, NULL, '2023-04-07', '2023-04-07'),
+(29241, 53, NULL, '2023-04-07', '2023-04-07'),
+(29242, 53, NULL, '2023-04-07', '2023-04-07'),
+(29243, 53, NULL, '2023-04-07', '2023-04-07'),
+(29244, 53, NULL, '2023-04-07', '2023-04-07'),
+(29245, 53, NULL, '2023-04-07', '2023-04-07'),
+(29246, 53, NULL, '2023-04-07', '2023-04-07'),
+(29247, 53, NULL, '2023-04-07', '2023-04-07'),
+(29248, 53, NULL, '2023-04-07', '2023-04-07'),
+(29249, 53, NULL, '2023-04-07', '2023-04-07'),
+(29250, 53, NULL, '2023-04-07', '2023-04-07'),
+(29251, 53, NULL, '2023-04-07', '2023-04-07'),
+(29252, 53, NULL, '2023-04-07', '2023-04-07'),
+(29253, 53, NULL, '2023-04-07', '2023-04-07'),
+(29254, 53, NULL, '2023-04-07', '2023-04-07'),
+(29255, 53, NULL, '2023-04-07', '2023-04-07'),
+(29256, 53, NULL, '2023-04-07', '2023-04-07'),
+(29257, 53, NULL, '2023-04-07', '2023-04-07'),
+(29258, 53, NULL, '2023-04-07', '2023-04-07'),
+(29259, 53, NULL, '2023-04-07', '2023-04-07'),
+(29260, 53, NULL, '2023-04-07', '2023-04-07'),
+(29261, 53, NULL, '2023-04-07', '2023-04-07'),
+(29262, 53, NULL, '2023-04-07', '2023-04-07'),
+(29263, 53, NULL, '2023-04-07', '2023-04-07'),
+(29264, 53, NULL, '2023-04-07', '2023-04-07'),
+(29265, 53, NULL, '2023-04-07', '2023-04-07'),
+(29266, 53, NULL, '2023-04-07', '2023-04-07'),
+(29267, 53, NULL, '2023-04-07', '2023-04-07'),
+(29268, 53, NULL, '2023-04-07', '2023-04-07'),
+(29269, 53, NULL, '2023-04-07', '2023-04-07'),
+(29270, 53, NULL, '2023-04-07', '2023-04-07'),
+(29271, 53, NULL, '2023-04-07', '2023-04-07'),
+(29272, 53, NULL, '2023-04-07', '2023-04-07'),
+(29273, 53, NULL, '2023-04-07', '2023-04-07'),
+(29274, 53, NULL, '2023-04-07', '2023-04-07'),
+(29275, 53, NULL, '2023-04-07', '2023-04-07'),
+(29276, 53, NULL, '2023-04-07', '2023-04-07'),
+(29277, 54, 1, '2023-04-07', '2023-04-07');
 
 -- --------------------------------------------------------
 
@@ -333,6 +334,7 @@ CREATE TABLE `users` (
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
   `password` varchar(255) NOT NULL,
   `Role` varchar(255) DEFAULT 'client',
   `remember_token` varchar(100) DEFAULT NULL,
@@ -344,14 +346,20 @@ CREATE TABLE `users` (
 -- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `Role`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'fadwa', 'fadwacherqui@gmail.com', NULL, '$2y$10$IzSXs979Y.aYCTRX.T78FuwAM6B4kM.KjfVI11hXTHYbdNhXMyX1S', 'admin', NULL, '2023-03-14 08:06:09', '2023-03-23 22:18:21'),
-(4, 'salma', 'email@gmail.com', NULL, '12345678', 'Dj', NULL, NULL, NULL),
-(5, 'sara', 'sara@gmail.com', NULL, '12334', 'Dj', NULL, NULL, NULL);
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `image`, `password`, `Role`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'fadwa', 'fadwacherqui@gmail.com', NULL, 'images/ygq0z9RgqbiOdV9MXMnFQ1eLZJsxl3UjDUT6E5CQ.jpg', '$2y$10$IzSXs979Y.aYCTRX.T78FuwAM6B4kM.KjfVI11hXTHYbdNhXMyX1S', 'admin', NULL, '2023-03-14 08:06:09', '2023-04-07 10:29:16'),
+(6, 'David Guetta', 'DavidGuetta@gmail.com', NULL, 'images/RyZeRzZExcZVr2pNygukqVnTBVBgF7G0MNd39LMG.jpg', '$2y$10$4iT5mq85hbCdike5g5Hx0.kAKANSvmxdyW3JMPfXdMGcUCNmQ5m1i', 'Dj', NULL, '2023-04-07 10:36:51', '2023-04-07 10:38:16');
 
 --
 -- Index pour les tables déchargées
 --
+
+--
+-- Index pour la table `commments`
+--
+ALTER TABLE `commments`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `post` (`post`);
 
 --
 -- Index pour la table `events`
@@ -390,6 +398,13 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
+-- Index pour la table `posts`
+--
+ALTER TABLE `posts`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `DJ-create` (`DJ-create`);
+
+--
 -- Index pour la table `sponsors`
 --
 ALTER TABLE `sponsors`
@@ -422,10 +437,16 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT pour la table `commments`
+--
+ALTER TABLE `commments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT pour la table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT pour la table `failed_jobs`
@@ -446,6 +467,12 @@ ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT pour la table `posts`
+--
+ALTER TABLE `posts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT pour la table `sponsors`
 --
 ALTER TABLE `sponsors`
@@ -461,17 +488,23 @@ ALTER TABLE `styles`
 -- AUTO_INCREMENT pour la table `tickets`
 --
 ALTER TABLE `tickets`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28996;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29278;
 
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Contraintes pour les tables déchargées
 --
+
+--
+-- Contraintes pour la table `commments`
+--
+ALTER TABLE `commments`
+  ADD CONSTRAINT `commments_ibfk_1` FOREIGN KEY (`post`) REFERENCES `posts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `events`
@@ -480,6 +513,12 @@ ALTER TABLE `events`
   ADD CONSTRAINT `events_createur_foreign` FOREIGN KEY (`createur`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `events_dj_foreign` FOREIGN KEY (`DJ`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `events_ibfk_1` FOREIGN KEY (`style`) REFERENCES `styles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Contraintes pour la table `posts`
+--
+ALTER TABLE `posts`
+  ADD CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`DJ-create`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `sponsors`
