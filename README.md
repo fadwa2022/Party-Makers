@@ -20,14 +20,14 @@ ainsi ya la partie de sponsorisation.
 
 ##  CLASSE
 <p aligne="center">
-<img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/diagramme%20classe.png">
+<img  aligne="center" width="80%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/diagramme%20classe.png">
  
 ## SEQUENCE
 <p aligne="center">
-<img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/AS.png">
-<img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/cs.png">
-  <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/ds.png">
-  <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/ss.png">
+<img  aligne="center" width="80%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/AS.png">
+<img  aligne="center" width="80%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/cs.png">
+  <img  aligne="center" width="80%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/ds.png">
+  <img  aligne="center" width="80%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/ss.png">
 </p>
 
 # MAQUETTE
@@ -39,39 +39,34 @@ ainsi ya la partie de sponsorisation.
 # Répartition des technologies
 
 <div style="display:flex; flex-direction:row;">
-     <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/Capture%20d%E2%80%99%C3%A9cran%202023-04-12%20152000.png">
-    <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/Capture%20d%E2%80%99%C3%A9cran%202023-04-12%20152347.png">
+     <img  aligne="center" width="80%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/Capture%20d%E2%80%99%C3%A9cran%202023-04-12%20152000.png">
+    <img  aligne="center" width="80%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/Capture%20d%E2%80%99%C3%A9cran%202023-04-12%20152347.png">
 </div>
 
 # Des Extraits Du Site
-
 <div style="display:flex; flex-direction:row;">
+
    <p>PAGE HOME</p>
-    <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/pagehome.png">
+   <img  aligne="center" width="80%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/pagehome.png">
    
-      <p>AFICHAGE DES DJ DU SITE</p>
-    <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/homedjs.png">
+   <p>AFICHAGE DES DJ DU SITE</p>
+    <img  aligne="center" width="80%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/homedjs.png">
    
-      <p>PAGE DEDIEE A LA CREATION D’UN EVENEMENT</p>
-    <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202023-04-13%20113121.png">
+   <p>PAGE DEDIEE A LA CREATION D’UN EVENEMENT</p>
+    <img  aligne="center" width="80%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202023-04-13%20113121.png"></div>
    
-      <p>PARTIE DES EVENEMENTS</p>
-    <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202023-04-13%20112942.png">
+  <p>PARTIE DES EVENEMENTS</p>
+    <img  aligne="center" width="80%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202023-04-13%20112942.png"></div>
    
-         <p>MODELE DE BILLET AVEC UN QR CONTENANTNUMERO DE L’EVENEMENT ,QUI PEUT 
-ETRE TELECHARGE SOUS FORME PDF</p>
-    <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202023-04-13%20113023.png">
+   <p>MODELE DE BILLET AVEC UN QR CONTENANTNUMERO DE L’EVENEMENT ,QUI PEUT ETRE TELECHARGE SOUS FORME PDF</p>
+    <img  aligne="center" width="80%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202023-04-13%20113023.png"></div>
    
-         <p>PROFILE DJ</p>
-    <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202023-04-13%20113418.png">
+   <p>PROFILE DJ</p>
+    <img  aligne="center" width="80%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202023-04-13%20113418.png"></div>
    
-         <p>PUBLICATION DU DJ</p>
-    <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202023-04-13%20113334.png">
+   <p>PUBLICATION DU DJ</p>
+    <img  aligne="center" width="80%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202023-04-13%20113334.png"></div>
    
-         <p>PARTIE ADMINISTRATION PERMET DE GERER LE SITE A L’AIDE DES TABLEAUX
-</p>
-    <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202023-04-13%20114034.png">
-
-
-
+   <p>PARTIE ADMINISTRATION PERMET DE GERER LE SITE A L’AIDE DES TABLEAUX</p>
+    <img  aligne="center" width="80%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202023-04-13%20114034.png"></div>
 </div>
