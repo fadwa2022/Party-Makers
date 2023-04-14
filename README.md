@@ -13,7 +13,10 @@ ainsi ya la partie de sponsorisation.
 * LARAVEL
 * Blade
 * SQL
-* 
+
+# Rapport 
+[rapport](https://drive.google.com/file/d/1sHk7opHUzT2EwFl87ZctvFIcZrpZdWQz/view?usp=sharing)
+
 # CONCAPTION UML
 ## USE CASE
 ![](https://github.com/fadwa2022/IMAGEMP/blob/main/images/use%20case.png)
@@ -70,5 +73,3 @@ ainsi ya la partie de sponsorisation.
     <img  aligne="center" width="80%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202023-04-13%20114034.png"></div>
 </div>
 
-# Rapport 
-[rapport](https://drive.google.com/file/d/1sHk7opHUzT2EwFl87ZctvFIcZrpZdWQz/view?usp=sharing)
