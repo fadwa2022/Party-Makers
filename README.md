@@ -35,3 +35,24 @@ ainsi ya la partie de sponsorisation.
 <p aligne="center">
 <img  aligne="center" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202023-02-20%20144441.png">
 </p>
+
+# Répartition des technologies
+
+<div style="display:flex; flex-direction:row;">
+     <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/Capture%20d%E2%80%99%C3%A9cran%202023-04-12%20152000.png">
+    <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/Capture%20d%E2%80%99%C3%A9cran%202023-04-12%20152347.png">
+</div>
+# Des Extraits Du Site
+<div style="display:flex; flex-direction:row;">
+    <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/pagehome.png">
+    <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/homedjs.png">
+    <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202023-04-13%20113121.png">
+    <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202023-04-13%20112942.png">
+    <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202023-04-13%20113023.png">
+    <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202023-04-13%20113418.png">
+    <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202023-04-13%20113334.png">
+    <img  aligne="center" width="50%" src="https://github.com/fadwa2022/IMAGEMP/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202023-04-13%20114034.png">
+
+
+
+</div>
