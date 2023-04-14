@@ -1,5 +1,9 @@
 # Party-Makers
-Party Makers est un site web qui permet à chaque personne de créer une fête personnalisée en y ajoutant sa touche personnelle. Les autres utilisateurs ont également la possibilité de rejoindre des "partys" existantes en achetant des tickets. Le site permet également aux DJs de créer un profil personnel . Il y a également une section dédiée à la sponsorship qui permet de soumettre une demande à l'administrateur du site, qui est responsable de la gestion des fêtes, des DJs et des sponsorships.
+   Le projet "Party Makers" est un site web développé dans le cadre d'un projet fil rouge de notre formation en Développement Informatique à Youcode.    L'objectif principal était de créer une plateforme permettant aux utilisateurs de concevoir leur propre soirée et de personnaliser leur événement tout en offrant la possibilité aux autres utilisateurs de rejoindre des soirées existantes.
+  Le site web dispose de plusieurs fonctionnalités, dont la partie DJ, permettant aux utilisateurs de suivre leurs DJ préférés et de réagir à leurs publications, ainsi que la possibilité pour les DJ de publier et de consulter ses soirées. 
+  La partie d'administration permet de gérer l'ensemble du site web.
+ainsi ya la partie de sponsorisation.
+
 # Technologies
 * HTML5
 * CSS3
@@ -9,6 +13,7 @@ Party Makers est un site web qui permet à chaque personne de créer une fête p
 * LARAVEL
 * Blade
 * SQL
+* 
 # CONCAPTION UML
 ## USE CASE
 ![](https://github.com/fadwa2022/IMAGEMP/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202023-02-20%20101824.png)
